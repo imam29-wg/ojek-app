@@ -12,6 +12,8 @@ create table profil(
 insert into profil values('1','Pikachu Smith', 'pikapikapikachu', 'pikachu@pokemonworld.net', 'pokepokemon', '089900990099', 1);
 insert into profil values('2','Paul Sitanggang', 'paulcuk', 'paulcuk@yahoo.com', 'poletarism', '081208120812', 0);
 insert into profil values('3', 'Poke John', 'johntol', 'johntol@gmail.com', '12341234', '081208130814', 1);
+insert into profil values('4', 'a', 'a', 'a@gmail.com', 'a', '081208130815', 1);
+
 
 drop table if exists pref_location;
 create table pref_location(
