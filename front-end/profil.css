@@ -1,11 +1,23 @@
 #hai{
-    position: absolute;
-    right: 0;
-    text-align: right;
+    right: 50px;
 }
 a.logout{
      position: absolute;
      right: 0;
      text-align: right;
- }
+}
 
+.username{
+    font-weight: bold;
+    color: blue;
+}
+
+#pilihan{
+    position: static;
+}
+
+#order_box, #history_box, #profil_box {
+    width: 150px;
+    border: 2px solid green;
+    display: inline-block;
+}
