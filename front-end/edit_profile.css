@@ -1,0 +1,22 @@
+#gambar{
+    display: inline-block;
+}
+
+#edit_picture{
+    display: inline-block;
+    margin: auto;
+}
+
+#back{
+    background-color: red;
+    text-decoration: none;
+    color: black
+}
+
+#save{
+    color: green;
+    position: absolute;
+    text-align: right;
+    text-decoration: none;
+    background-color: green;
+}
