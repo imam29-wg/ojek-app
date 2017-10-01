@@ -1,6 +1,6 @@
 drop table if exists profil;
 create table profil(
-  ID INT,
+  ID INT NOT NULL AUTO_INCREMENT,
   Name VARCHAR(50),
   Username VARCHAR(50),
   Email VARCHAR(50),

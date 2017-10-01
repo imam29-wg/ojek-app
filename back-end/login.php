@@ -1,7 +1,7 @@
 <?php
     // Fungsi untuk menghubungkan ke MySQL
     function connectTOSQL(){
-        return mysqli_connect("localhost", "root", "", "ojek2an");
+        return mysqli_connect("localhost", "root", "", "ojek");
     }
 
     // Fungsi untuk memvalidasi username dan password user
