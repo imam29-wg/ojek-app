@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="edit_profile.css">
+</head>
+<title>Edit Profile</title>
+<body>
+    <h2>EDIT PROFILE INFORMATION</h2>
+    <div id="profile_picture">
+        <img id="gambar" src="../gambar/profil_1.png" height="200px" width="200px">
+        <form id="edit_picture" action="../back-end/edit_profile.php" method="post">
+                Select image to upload: <br>
+                <input type="text" title="ubah"><input type="file" name="fileToUpload" id="fileToUpload">
+         </form>
+    </div> <br><br>
+    Your Name <input type="text" title="nama" name="nama"><br>
+    Phone <input type="text" title="telpon" name="telpon"><br>
+    Status Driver :  <img src="../gambar/toggle_yes.png" height="20px" width="40px"> <br><br>
+    <div id="next_action">
+        <a id="back" href="profil.html">BACK</a>
+        <div id="save"><input type="submit" value="SAVE"></div>
+    </div>
+</body>
+</html>

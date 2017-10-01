@@ -21,7 +21,7 @@
                 header("Location: ../front-end/profil.html?id_active=$id");
             }
             else {
-                header("Location: pesan.php?id_active=$id");
+                header("Location: ../front-end/pesan.html?id_active=$id");
             }
 
             die();
