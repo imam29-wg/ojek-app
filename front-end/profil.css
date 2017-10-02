@@ -2,6 +2,7 @@
     right: 50px;
     text-align: right;
 }
+
 a.logout{
      position: absolute;
      right: 50px;
@@ -10,6 +11,7 @@ a.logout{
 
 div.username{
     font-weight: bold;
+    display: inline;
 }
 
 #pilihan{
