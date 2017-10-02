@@ -23,7 +23,7 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }
-        $id = $_GET['id_active'];
+        $id = $_SESSION["login_user"];
         $db = connectTOSQL();
         $prefLocsql = "select Location from pref_location where ID = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
@@ -36,7 +36,7 @@
             echo "<tr>";
             echo "<td> $count </td>";
             echo "<td> $row[0] </td>";
-            echo "<td> <a href=\"#\" onclick=\"removePrefLoc($id,'$row[0]')\"> remove </a>";
+            echo "<td> <a href=\"#\" onclick=\"removePrefLoc($id,'$row[0]')\"> <img src=\"../gambar/cross_icon.png\" height=\"20px\" width=\"20px\"> </a>";
             echo "</tr>";
 
         }
@@ -70,7 +70,7 @@
     <form action="../back-end/addPrefLoc.php" method="post" >
         <input title="" type="text" name="loc" value="" size="30"> <br>
         <input title="" type="submit" value="ADD">
-        <?php $id = $_GET['id_active']; echo "<input type=\"hidden\" name=\"id\" value=$id>"; ?>
+        <?php $id = $_SESSION["login_user"]; echo "<input type=\"hidden\" name=\"id\" value=$id>"; ?>
     </form>
     <iframe name="daemon" style="display:none;"></iframe>
 </body>
