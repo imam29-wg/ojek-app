@@ -1,13 +1,33 @@
 <html>
 <title>Edit Preference Location</title>
 <head>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
+    <div id="header">
+        <div id="company">
+            <div id="name">PR-OJEK</div>
+            <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
+        </div>
+        <div id="userid">
+            <div id="username">Hai, huahahehe </div>
+            <a href="logout.html">Logout</a>
+        </div>
+    </div>
+
+    <div id="nav_tab">
+        <table>
+            <tr>
+                <td> <a href="pesan.html">ORDER</a> </td>
+                <td> <a href="riwayat.html">HISTORY</a> </td>
+                <td class="selected"> <a href="#">MY PROFILE</a> </td>
+            </tr>
+        </table>
+    </div>
 
 
-    <h1>Edit Preference Location</h1>
+    <div class="page_title">Edit Preference Location</div>
     
 
     <table border="1">
@@ -23,7 +43,7 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }
-        $id = $_GET['id_active'];
+        $id = $_SESSION["login_user"];
         $db = connectTOSQL();
         $prefLocsql = "select Location from pref_location where ID = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
@@ -36,7 +56,7 @@
             echo "<tr>";
             echo "<td> $count </td>";
             echo "<td> $row[0] </td>";
-            echo "<td> <a href=\"#\" onclick=\"removePrefLoc($id,'$row[0]')\"> remove </a>";
+            echo "<td> <a href=\"#\" onclick=\"removePrefLoc($id,'$row[0]')\"> <img src=\"../gambar/cross_icon.png\" height=\"20px\" width=\"20px\"> </a>";
             echo "</tr>";
 
         }
@@ -66,12 +86,11 @@
 
 </script>
 
-    <h1>Add New Location</h1>
+    <div class="page_subtitle">Add New Location</div>
     <form action="../back-end/addPrefLoc.php" method="post" >
         <input title="" type="text" name="loc" value="" size="30"> <br>
-        <input title="" type="submit" value="ADD">
-        <?php $id = $_GET['id_active']; echo "<input type=\"hidden\" name=\"id\" value=$id>"; ?>
+        <input class="button_green" title="" type="submit" value="ADD">
+        <?php $id = $_SESSION["login_user"]; echo "<input type=\"hidden\" name=\"id\" value=$id>"; ?>
     </form>
-    <iframe name="daemon" style="display:none;"></iframe>
 </body>
 </html>
