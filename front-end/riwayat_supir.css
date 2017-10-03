@@ -19,7 +19,7 @@ a.profil_box, a.order_box{
     text-align: center;
 }
 
-#riwayat_sebelumnya{
+#riwayat_supir{
     width: 225px;
     border: 2px solid deepskyblue;
     display: inline-block;
@@ -27,7 +27,7 @@ a.profil_box, a.order_box{
     text-align: center;
 }
 
-a.riwayat_supir{
+a.riwayat_sebelumnya{
     width: 225px;
     border: 2px solid deepskyblue;
     display: inline-block;
@@ -36,10 +36,15 @@ a.riwayat_supir{
     text-decoration: none;
 }
 
-#comment{
-    left: 10px;
+#rating{
+    color: yellow;
 }
 
 #hide{
     background-color: red;
+}
+
+#rating{
+    color: blue;
+    display: inline;
 }

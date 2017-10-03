@@ -1,0 +1,13 @@
+#login_body{
+    height: 500px;
+    width: 500px;
+    border-radius: 15%;
+    background-color: green;
+    border: 15px solid yellow;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div.login_tengah{
+    text-align: center;
+}

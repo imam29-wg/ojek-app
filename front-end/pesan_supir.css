@@ -19,14 +19,14 @@ a.profil_box, a.history_box{
     text-align: center;
 }
 
-#pilih_destinasi{
+#pilih_supir{
     width: 150px;
     background-color: yellow;
     display: inline-block;
     border: 2px solid grey;
 }
 
-#pilih_supir, #selesai_order{
+#pilih_destinasi, #selesai_order{
     width: 150px;
     display: inline-block;
     border: 2px solid grey;
@@ -34,3 +34,10 @@ a.profil_box, a.history_box{
     color: black;
 }
 
+div.supir_lainnya, div.supir_pilihan{
+    border: 2px solid black;
+}
+
+div.supir{
+
+}
