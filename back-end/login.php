@@ -27,7 +27,7 @@
             die();
         }
         else{
-            header("Location: gagal.html");
+            header("Location: ../front-end/gagal.html");
             die();
         }
     }
