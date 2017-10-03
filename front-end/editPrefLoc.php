@@ -11,8 +11,8 @@
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
-            <div id="username">Hai, huahahehe </div>
-            <a href="logout.html">Logout</a>
+            <div id="username"></div>
+            <a href="login.html">Logout</a>
         </div>
     </div>
 
@@ -26,7 +26,12 @@
         </table>
     </div>
 
-
+    <div class="page_subtitle">
+        PREFERRED LOCATIONS:
+        <div class="pena">
+            <img src="../gambar/pena.png">
+        </div>
+    </div>
     <div class="page_title">Edit Preference Location</div>
     
 
@@ -79,12 +84,12 @@
             loc.replace(/ /g,"+") 
             xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,true);
             xmlhttp.send();
-            location.reload(true);
         }
-        
     }
 
 </script>
+
+<script type="text/javascript" src="displayUsername.js"></script>
 
     <div class="page_subtitle">Add New Location</div>
     <form action="../back-end/addPrefLoc.php" method="post" >

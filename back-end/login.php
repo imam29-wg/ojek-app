@@ -13,10 +13,11 @@
         $count = mysqli_num_rows($result);
         if ($count == 1){
             $_SESSION['login_user'] = $id;
+            $_SESSION['username'] = $username;
             $isdriversql = "select Driver from profil where ID = '$id'";
             $driver_result = mysqli_query($db, $isdriversql);
-            $driver_row = mysqli_fetch_array($driver_result, MYSQLI_ASSOC);
-            $driver = $driver_row['Driver'];
+            $driver_row = mysqli_fetch_arra            $driver = $driver_row['Driver'];
+y($driver_result, MYSQLI_ASSOC);
             if ($driver == 1){
                 header("Location: ../front-end/profil.html?id_active=$id");
             }
@@ -31,6 +32,7 @@
             die();
         }
     }
+    
     session_start();
     $db = connectTOSQL();
     $username = $_POST['username'];
