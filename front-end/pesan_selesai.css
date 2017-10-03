@@ -19,18 +19,17 @@ a.profil_box, a.history_box{
     text-align: center;
 }
 
-#pilih_destinasi{
+#selesai_order{
     width: 150px;
     background-color: yellow;
     display: inline-block;
     border: 2px solid grey;
 }
 
-#pilih_supir, #selesai_order{
+#pilih_supir, #pilih_destinasi{
     width: 150px;
     display: inline-block;
     border: 2px solid grey;
     text-decoration: none;
     color: black;
 }
-
