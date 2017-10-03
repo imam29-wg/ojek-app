@@ -89,28 +89,8 @@
 
 </script>
 
-<script type="text/javascript">
-    // ambil data
-    var xmlhttp;
-    if (window.XMLHttpRequest){
-        xmlhttp = new XMLHttpRequest();
-    } else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    var searchparam = new URLSearchParams(window.location.search);
-    var id = searchparam.get("id_active");
-    xmlhttp.open("GET","../back-end/getUsername.php?id_active="+id,true);
-    xmlhttp.send();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200){
-                  var user = document.getElementById("username");
-                        var nama = document.createTextNode("Hi, " + this.response);
-                        user.appendChild(nama);
-                    }
-                };
+<script type="text/javascript" src="displayUsername.js"></script>
 
-
-</script>
     <div class="page_subtitle">Add New Location</div>
     <form action="../back-end/addPrefLoc.php" method="post" >
         <input title="" type="text" name="loc" value="" size="30"> <br>
