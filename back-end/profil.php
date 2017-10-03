@@ -7,9 +7,10 @@
     <?php
         session_start();
         function connectTOSQL(){
-            return mysqli_connect("localhost", "root", "", "ojek2an");
+            return mysqli_connect("localhost", "root", "", "ojek");
         }   
-        $id = $_SESSION['login_user'];
+        //$id = $_SESSION['login_user'];
+        $id = 1;
         $db = connectTOSQL();
         $usersql = "select Username, Driver from profil where ID = '$id'";
         $user_result = mysqli_query($db, $usersql);
@@ -35,11 +36,15 @@
 
         connectTOSQL();
 
-        echo $driver_avg_rating + " ";
-        echo $driver_vote + " ";
-        echo sizeof($driver_location) + " ";
-        foreach ($driver_location as $value) {
-            echo $value + " ";
+        echo $driver_avg_rating;
+        echo " ";
+        echo $driver_vote;
+        echo " ";
+        echo sizeof($driver_location);
+        echo  " ";
+        foreach (array($driver_location) as $value) {
+            echo $value;
+            echo " ";
         }
 
     ?>
