@@ -11,8 +11,8 @@
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
-            <div id="username">Hai, huahahehe </div>
-            <a href="logout.html">Logout</a>
+            <div id="username"></div>
+            <a href="login.html">Logout</a>
         </div>
     </div>
 
@@ -84,15 +84,12 @@
             loc.replace(/ /g,"+") 
             xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,true);
             xmlhttp.send();
-            location.reload(true);
         }
-        
     }
 
 </script>
 
 <script type="text/javascript">
-    var header = document.getElementsById("username");
     // ambil data
     var xmlhttp;
     if (window.XMLHttpRequest){
@@ -100,9 +97,17 @@
     } else {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    loc.replace(/ /g,"+") 
-    xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,true);
+    var searchparam = new URLSearchParams(window.location.search);
+    var id = searchparam.get("id_active");
+    xmlhttp.open("GET","../back-end/getUsername.php?id_active="+id,true);
     xmlhttp.send();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200){
+                  var user = document.getElementById("username");
+                        var nama = document.createTextNode("Hi, " + this.response);
+                        user.appendChild(nama);
+                    }
+                };
 
 
 </script>
