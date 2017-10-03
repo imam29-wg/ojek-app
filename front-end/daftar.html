@@ -37,7 +37,7 @@
                       document.getElementById('username_check').src=this.responseText;
                   }
                 };
-                xmlhttp.open("GET", "validasiUsername.php?username="+username, true);
+                xmlhttp.open("GET", "../back-end/validasiUsername.php?username="+username, true);
                 xmlhttp.send();
             }
         }
@@ -45,7 +45,7 @@
         function validasiEmail(email){
             var xmlhttp;
             if (email === ""){
-                document.getElementById('email_check').src="cross_icon.png";
+                document.getElementById('email_check').src="../gambar/cross_icon.png";
             }
             else{
                 if (window.XMLHttpRequest){

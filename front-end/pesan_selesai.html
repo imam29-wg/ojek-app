@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="pesan.css">
+    <link rel="stylesheet" type="text/css" href="pesan_selesai.css">
     <link rel="stylesheet" type="text/css" href="tampilan_atas.css">
 </head>
 <title>Pesan</title>
@@ -16,6 +16,10 @@
             <a href="login.html">logout</a>
         </div>
     </div>
+    <div id="hai">hi, <div class="username">pikapikachu</div></div>
+    <a class="logout" href="login.html">logout</a>
+    <h3>PR-OJEK</h3>
+    <h4>wush... wush... ngeeeeeeeenggg...</h4>
     <div id="pilihan">
         <div id="order_box">ORDER</div>
         <a class="history_box" href="riwayat.html">HISTORY</a>
@@ -27,13 +31,17 @@
         <div id="pilih_supir">2. Select a Driver</div>
         <div id="selesai_order">3. Complete your order</div>
     </div>
-    Picking point<input id="pick_point" title="pick_driver" type="text"> <br>
-    Destination <input id="destination" title="destination" type="text"><br>
-    Preferred Driver <input id="pref_driver" title="pref_driver" type="text"><br>
-
-    <form action="pesan_supir.html" method="get">
-        <input type="submit" value="NEXT">
+    <h2>HOW WAS IT?</h2>
+    <div>
+        <img id="gambar_profil" src="../gambar/profil_1.png" height="200px" width="200px">
+        <h3>@pikapikachu</h3>
+        <h3>Pikachu Smith<img src="../gambar/bintang.png" height="20px" width="20px">4.7 (1,728 votes)</h3>
+        <h3>Rating: </h3> <input type="number" name="rating" title="rating" min="1" max="5"> <br>
+    </div>
+    <h3>Komentar:</h3>
+    <input type="text" title="comment" name="comment" size="50">
+    <form action="riwayat.html" method="get">
+        <input type="submit" value="COMPLETE ORDER">
     </form>
-
 </body>
 </html>
