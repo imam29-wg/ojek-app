@@ -15,6 +15,13 @@ body{
 	font-size: 200%;
 }
 
+.page_subtitle .pena{
+	float: right;
+	width: 5%;
+}
+
+
+
 #header{
 	
 	height: 15%;
@@ -86,3 +93,4 @@ body{
 .button_red{
 	background-color: red;
 }
+

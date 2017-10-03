@@ -26,7 +26,12 @@
         </table>
     </div>
 
-
+    <div class="page_subtitle">
+        PREFERRED LOCATIONS:
+        <div class="pena">
+            <img src="../gambar/pena.png">
+        </div>
+    </div>
     <div class="page_title">Edit Preference Location</div>
     
 
@@ -86,6 +91,21 @@
 
 </script>
 
+<script type="text/javascript">
+    var header = document.getElementsById("username");
+    // ambil data
+    var xmlhttp;
+    if (window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    loc.replace(/ /g,"+") 
+    xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,true);
+    xmlhttp.send();
+
+
+</script>
     <div class="page_subtitle">Add New Location</div>
     <form action="../back-end/addPrefLoc.php" method="post" >
         <input title="" type="text" name="loc" value="" size="30"> <br>
