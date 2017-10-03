@@ -33,16 +33,18 @@ CREATE TABLE `history` (
   `ID_Driver` int(11) NOT NULL,
   `Order_Date` date DEFAULT NULL,
   `Rating` int(11) DEFAULT NULL,
-  `Comment` varchar(140) DEFAULT NULL
+  `Comment` varchar(140) DEFAULT NULL,
+  `Hidden` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `history`
 --
 
-INSERT INTO `history` (`ID_Cust`, `Source`, `Dest`, `ID_Driver`, `Order_Date`, `Rating`, `Comment`) VALUES
-(1, 'Saffron City', 'Pewter City', 3, '2017-01-10', 2, 'mamangnya bau'),
-(2, 'Saffron City', 'Pewter City', 1, '2017-01-10', 4, 'mantap ojeknya');
+INSERT INTO `history` (`ID_Cust`, `Source`, `Dest`, `ID_Driver`, `Order_Date`, `Rating`, `Comment`, `Hidden`) VALUES
+(1, 'Saffron City', 'Pewter City', 3, '2017-01-10', 2, 'mamangnya bau', 1),
+(1, 'Saffron City', 'Sky Pillar', 4, '2017-01-9', 2, 'mamangnya bau', 0),
+(2, 'Saffron City', 'Pewter City', 1, '2017-01-10', 4, 'mantap ojeknya', 1);
 
 -- --------------------------------------------------------
 

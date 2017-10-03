@@ -53,7 +53,7 @@
         $count = 0;
 
         while ($row = mysqli_fetch_row($prefLoc_result)) {
-            $count = $count + 1;
+        	if ($row[7] == 0){
             echo '<td rowspan="2">';
             echo 'gambar '.$id;
             echo '</td>';
@@ -77,6 +77,7 @@
             echo 'You rated: ' .$row[5] .'/5 <br>You Commented: ' .$row[6] ;
             echo '</td>';
             echo '</tr>';
+        }
 
 
         }
