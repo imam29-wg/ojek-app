@@ -1,0 +1,70 @@
+<?php
+//    header("Location: gagal.php");
+//?>
+<html>
+<title>DAFTAR</title>
+<head>
+    <link rel="stylesheet" href="daftar.css">
+</head>
+<body>
+    <h1>SIGNUP</h1><br><br>
+    <form action="../back-end/daftar.php" method="post" >
+        Your Name<br>         <input title="" type="text" name="name" value="" size="30"> <br>
+        Username<br>          <input title="" type="text" name="username" value="" size="25" onchange="validasiUsername(this.value)"><img id="username_check" src="" height="20px" width="20px"><br>
+        Email<br>             <input title="" type="text" name="email" value="" size="25" onchange="validasiEmail(this.value)"><img id="email_check" src="" height="20px" width="20px"><br>
+        Password<br>          <input title="" type="password" name="password" value="" size="30"><br>
+        Confirm Password<br>  <input title="" type="password" name="confirm" value="" size="30"><br>
+        Phone Number<br>      <input title="" type="text" name="phone" value="" size="30"><br>
+        <input title="" type="checkbox" name="driver"> Also sign me up as a driver <br><br>
+        <input title="" type="submit" value="REGISTER">
+    </form>
+    <a href="login.html">Already have an account</a>
+    <script>
+        function validasiUsername(username){
+            var xmlhttp;
+            if (username === ""){
+                document.getElementById('username_check').src="cross_icon.png";
+            }
+            else{
+                if (window.XMLHttpRequest){
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else{
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function () {
+                  if (this.readyState === 4 && this.status === 200){
+                      document.getElementById('username_check').src=this.responseText;
+                  }
+                };
+                xmlhttp.open("GET", "validasiUsername.php?username="+username, true);
+                xmlhttp.send();
+            }
+        }
+
+        function validasiEmail(email){
+            var xmlhttp;
+            if (email === ""){
+                document.getElementById('email_check').src="cross_icon.png";
+            }
+            else{
+                if (window.XMLHttpRequest){
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else{
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function(){
+                    if (this.readyState === 4 && this.status === 200){
+                        document.getElementById('email_check').src=this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "validasiEmail.php?email="+email, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+
+
+</body>
+</html>

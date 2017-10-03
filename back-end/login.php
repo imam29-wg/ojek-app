@@ -1,7 +1,7 @@
 <?php
     // Fungsi untuk menghubungkan ke MySQL
     function connectTOSQL(){
-        return mysqli_connect("localhost", "root", "", "ojek2an");
+        return mysqli_connect("localhost", "root", "", "ojek");
     }
 
     // Fungsi untuk memvalidasi username dan password user
@@ -18,10 +18,10 @@
             $driver_row = mysqli_fetch_array($driver_result, MYSQLI_ASSOC);
             $driver = $driver_row['Driver'];
             if ($driver == 1){
-                header("Location: profil.php?id_active=$id");
+                header("Location: ../front-end/profil.html?id_active=$id");
             }
             else {
-                header("Location: pesan.php?id_active=$id");
+                header("Location: ../front-end/pesan.html?id_active=$id");
             }
 
             die();

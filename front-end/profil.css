@@ -1,0 +1,47 @@
+#hai{
+    right: 50px;
+    text-align: right;
+}
+
+a.logout{
+     position: absolute;
+     right: 50px;
+     text-align: right;
+}
+
+div.username{
+    font-weight: bold;
+    display: inline;
+}
+
+#pilihan{
+    position: static;
+    display: inline;
+}
+
+a.order_box, a.history_box {
+    width: 150px;
+    border: 2px solid greenyellow;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+#profil_box{
+    width: 150px;
+    border: 2px solid greenyellow;
+    display: inline-block;
+    background-color: green;
+    text-align: center;
+}
+
+#biodata{
+    text-align: center;
+}
+
+img.pena{
+    position: absolute;
+    right: 50px;
+    text-align: right;
+}
