@@ -9,14 +9,15 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }   
-        //$id = $_SESSION['login_user'];
-        $id = 1;
+        $id = $_SESSION['login_user'];
         $db = connectTOSQL();
-        $usersql = "select Username, Driver from profil where ID = '$id'";
+        $usersql = "select * from profil where ID = '$id'";
         $user_result = mysqli_query($db, $usersql);
         $user_row = mysqli_fetch_array($user_result, MYSQLI_ASSOC);
         $username = $user_row['Username'];
         $driver = $user_row['Driver'];
+
+        echo $user_row['Name'] . " " . $user_row['Username'] . " " . $user_row['Email'] . " " . $user_row['Phone'] . " " . $user_row['Driver'] . " " . $user_row['foto'] . " ";
 
         //menghitung rating
         if($driver[0] == 1) {
@@ -29,23 +30,25 @@
             $driversql = "select Location from pref_location where ID = '$id'";
             $driver_result = mysqli_query($db, $driversql);
             $driver_location_row = mysqli_fetch_array($driver_result, MYSQLI_ASSOC);
-            $driver_location = $driver_location_row['Location'];          
+            $driver_location = $driver_location_row['Location'];   
+            
+            echo $driver_avg_rating;
+            echo " ";
+            echo $driver_vote;
+            echo " ";
+            echo sizeof($driver_location);
+            echo  " ";
+            foreach (array($driver_location) as $value) {
+                echo $value;
+                echo " ";
+            }
         }
 
 
 
         connectTOSQL();
 
-        echo $driver_avg_rating;
-        echo " ";
-        echo $driver_vote;
-        echo " ";
-        echo sizeof($driver_location);
-        echo  " ";
-        foreach (array($driver_location) as $value) {
-            echo $value;
-            echo " ";
-        }
+
 
     ?>
 </body>
