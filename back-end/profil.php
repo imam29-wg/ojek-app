@@ -8,8 +8,8 @@
         session_start();
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek2an");
-        }
-        $id = $_GET['id_active'];
+        }   
+        $id = $_SESSION['login_user'];
         $db = connectTOSQL();
         $usersql = "select Username, Driver from profil where ID = '$id'";
         $user_result = mysqli_query($db, $usersql);
