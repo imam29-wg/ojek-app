@@ -1,43 +1,47 @@
-#pilihan{
+#supir_lainnya, #supir_pilihan{
+    border: 2px solid black;
+    width: 80%;
+    border-radius: 10%;
+    display: inline-flex;
+}
+
+.supir{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.gambar_supir{
+    float: left;
+}
+
+.identitas_supir{
+    float: right;
     display: inline;
 }
 
-a.profil_box, a.history_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    text-align: center;
-    color: black;
-    text-decoration: none;
+.nama_supir, .rating{
+    margin-left: 10px;
 }
 
-#order_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    background-color: green;
-    text-align: center;
+.nama_supir{
+    font-size: 30px;
 }
 
-#pilih_supir{
-    width: 150px;
-    background-color: yellow;
-    display: inline-block;
-    border: 2px solid grey;
+.rating{
+    display: inline;
+    color: yellow;
 }
 
-#pilih_destinasi, #selesai_order{
-    width: 150px;
-    display: inline-block;
-    border: 2px solid grey;
-    text-decoration: none;
-    color: black;
+.votes{
+    display: inline;
 }
 
-div.supir_lainnya, div.supir_pilihan{
+.pesan_supir_submit{
+    float: right;
+    width: 150px;
+    height: 35px;
+    margin-left: 55%;
     border: 2px solid black;
-}
-
-div.supir{
-
+    border-radius: 15%;
+    background-color: greenyellow;
 }
