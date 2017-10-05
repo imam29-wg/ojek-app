@@ -1,5 +1,5 @@
 <html>
-<title>Edit Preference Location</title>
+<title>Transaction History</title>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -26,19 +26,18 @@
         </table>
     </div>
 
-    <div class="page_title">History</div>
+    <div class="page_title">TRANSACTION HISTORY</div>
 
     <div id="history_tab">
 
-	    <table border="1">
+	    <table>
 	        <tr>
-	            <td> MY PREVIOUS ORDER </td>
+	            <td class="selected"> MY PREVIOUS ORDER </td>
 	            <td> DRIVER HISTORY </td>
 	        </tr>
 	    </table>
     
     </div>
-    <table border="1">
     <?php
         session_start();
         function connectTOSQL(){
@@ -53,12 +52,15 @@
         $count = 0;
 
         while ($row = mysqli_fetch_row($prefLoc_result)) {
-        	if ($row[7] == 0){
-            echo '<td rowspan="2">';
-            echo 'gambar '.$id;
-            echo '</td>';
-            
-            echo '<td>';
+        	$count = $count + 1;
+
+        	echo '	<div class="tabel_riwayat" id="history_' .$count .'">
+        			<table>
+        			<tr>
+        				<td rowspan="2" class="cell_profpic">
+        					<img src="../gambar/profil_' .$row[3] .'.png">
+        				</td>
+           				<td>';
             $date = new DateTime($row[4]);
             echo date_format($date,"l, F jS Y");
             echo '<br><b>';
@@ -69,7 +71,7 @@
             echo "$row[1] -> $row[2]";
             echo '</td>';
             echo '<td>';
-            echo 'tombol';
+            echo '<button class="button_red" onclick="remove(' .$count .') > REMOVE </button>';
             echo '</td>';
             echo "</tr>";
             echo '<tr>';
@@ -77,32 +79,16 @@
             echo 'You rated: ' .$row[5] .'/5 <br>You Commented: ' .$row[6] ;
             echo '</td>';
             echo '</tr>';
-        }
-
-
+        	echo '</table></div><br>';
         }
     ?>
-    </table>
-
-
 
 
 <script type="text/javascript">
-    function removePrefLoc(id, loc) {
-        var result = confirm("Want to delete?");
-        if (result) {
-            var xmlhttp;
-            if (window.XMLHttpRequest){
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            loc.replace(/ /g,"+") 
-            xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,true);
-            xmlhttp.send();
-        }
+    function remove(id) {
+    	var rem = document.getElementById("history_"+ id );
+    	rem.parentNode.removeChild(rem);
     }
-
 </script>
 
 <script type="text/javascript" src="displayUsername.js"></script>
