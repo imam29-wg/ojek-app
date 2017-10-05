@@ -16,8 +16,8 @@
             $_SESSION['username'] = $username;
             $isdriversql = "select Driver from profil where ID = '$id'";
             $driver_result = mysqli_query($db, $isdriversql);
-            $driver_row = mysqli_fetch_arra            $driver = $driver_row['Driver'];
-y($driver_result, MYSQLI_ASSOC);
+            $driver_row = mysqli_fetch_array($driver_result, MYSQLI_ASSOC);
+            $driver = $driver_row['Driver'];
             if ($driver == 1){
                 header("Location: ../front-end/profil.html?id_active=$id");
             }

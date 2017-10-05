@@ -5,15 +5,42 @@
 </head>
 <title>Profil</title>
 <body>
+    <script>
+        function getDataDriver(){
+    //        document.getElementById("username").innerHTML = "fungsi berhasil";
+            var xmlhttp;
+            var JSONDriver, username, name;
+            if (window.XMLHttpRequest){
+                xmlhttp = new XMLHttpRequest();
+            }
+            else{
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200){
+                    JSONDriver = JSON.parse(this.responseText);
+                    username = JSONDriver.username;
+//                    name = JSONDriver.name;
+    //                status = JSONDriver.
+    //                    rating = ;
+    //                phone = ;
+                    document.getElementById('username').innerHTML = "tes";
+                }
+            };
+            xmlhttp.open("GET", "../back-end/profil.php", true);
+            xmlhttp.send();
+        }
 
+    </script>
     <div id="header">
         <div id="company">
             <div id="name">PR-OJEK</div>
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
-            <div id="username">Hai, huahahehe </div>
-            <a href="logout.html">Logout</a>
+            <div id="username" > </div>
+            <script>getDataDriver();</script>
+            <a href="login.html">Logout</a>
         </div>
     </div>
 
@@ -26,13 +53,7 @@
             </tr>
         </table>
     </div>
-    <!--
-    <div id="pilihan">
-        <a class="order_box" href="pesan.html">ORDER</a>
-        <a class="history_box" href="riwayat.html">HISTORY</a>
-        <div id="profil_box">MY PROFILE</div>
-    </div>
-    
+
     <h2>My Profile <a href="edit_profile.html"><img class="pena" src="../gambar/pena.png"></a> </h2><br>
     <div id="biodata">
         <img id="gambar_profil" src="../gambar/profil_1.png" height="200px" width="200px">
@@ -44,6 +65,7 @@
         <h2>PREFERRED LOCATIONS:<a href="editPrefLoc.html"><img class="pena" src="../gambar/pena.png"></a></h2>
         <h3>->Pewter City</h3>
         <h3>->Saffron City</h3>
-        <h3>->Skypillar Tower</h3>!-->
+        <h3>->Skypillar Tower</h3>
+
 </body>
 </html>
