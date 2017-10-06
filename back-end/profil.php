@@ -1,9 +1,3 @@
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="profil.css">
-</head>
-<title>Profil</title>
-<body>
     <?php
         session_start();
         function connectTOSQL(){
@@ -48,5 +42,3 @@
         echo $final_json;
         connectTOSQL();
     ?>
-</body>
-</html>
