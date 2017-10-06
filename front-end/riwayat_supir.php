@@ -7,7 +7,7 @@
 
     <div id="header">
         <div id="company">
-            <div id="name">PR-OJEK</div>
+            <div id="name"><span class="hijau">PR</span>-<span class="merah">OJEK</span></div>
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
