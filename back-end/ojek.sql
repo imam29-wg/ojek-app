@@ -9,7 +9,9 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
+DROP TABLE IF EXISTS `history`;
+DROP TABLE IF EXISTS `pref_location`;
+DROP TABLE IF EXISTS `profil`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,38 +35,19 @@ CREATE TABLE `history` (
   `ID_Driver` int(11) NOT NULL,
   `Order_Date` date DEFAULT NULL,
   `Rating` int(11) DEFAULT NULL,
-  `Comment` varchar(140) DEFAULT NULL
+  `Comment` varchar(140) DEFAULT NULL,
+  `HidDriver` int(1) DEFAULT NULL,
+  `HidCust` int(1) DEFAULT NULL,
+  `Order_Id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `history`
 --
 
-INSERT INTO `history` (`ID_Cust`, `Source`, `Dest`, `ID_Driver`, `Order_Date`, `Rating`, `Comment`) VALUES
-(1, 'Saffron City', 'Pewter City', 3, '2017-01-10', 2, 'mamangnya bau'),
-(2, 'Saffron City', 'Pewter City', 1, '2017-01-10', 4, 'mantap ojeknya');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pesanan`
---
-
-CREATE TABLE `pesanan` (
-  `order_id` int(11) NOT NULL,
-  `penumpang_id` int(11) NOT NULL,
-  `driver_id` int(11) NOT NULL,
-  `lokasi_antar` varchar(100) NOT NULL,
-  `lokasi_jemput` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `pesanan`
---
-
-INSERT INTO `pesanan` (`order_id`, `penumpang_id`, `driver_id`, `lokasi_antar`, `lokasi_jemput`) VALUES
-(1, 2, 1, 'jakarta', 'bogor'),
-(2, 3, 1, 'bandung', 'depok');
+INSERT INTO `history` (`ID_Cust`, `Source`, `Dest`, `ID_Driver`, `Order_Date`, `Rating`, `Comment`, `HidDriver`, `HidCust`, `Order_ID`) VALUES
+(1, 'Saffron City', 'Pewter City', 3, '2017-01-10', 2, 'mamangnya bau', '0', '0',1),
+(2, 'Saffron City', 'Pewter City', 1, '2017-01-10', 4, 'mantap ojeknya', '0', '0',2);
 
 -- --------------------------------------------------------
 
@@ -113,6 +96,7 @@ INSERT INTO `profil` (`ID`, `Name`, `Username`, `Email`, `Password`, `Phone`, `D
 (3, 'Poke John', 'johntol', 'johntol@gmail.com', '12341234', '081208130814', 1, '../gambar/profil_1.png'),
 (4, 'a', 'a', 'a@gmail.com', 'a', '081208130815', 1, '../gambar/profil_1.png');
 
+
 --
 -- Indexes for dumped tables
 --
@@ -121,8 +105,7 @@ INSERT INTO `profil` (`ID`, `Name`, `Username`, `Email`, `Password`, `Phone`, `D
 -- Indexes for table `history`
 --
 ALTER TABLE `history`
-  ADD PRIMARY KEY (`ID_Cust`,`ID_Driver`),
-  ADD KEY `ID_Driver` (`ID_Driver`);
+  ADD PRIMARY KEY (`Order_ID`);
 
 --
 -- Indexes for table `pref_location`

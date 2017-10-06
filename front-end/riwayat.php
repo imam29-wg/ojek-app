@@ -39,7 +39,6 @@
     <div id="history_tab">
 
     <?php
-        $id = $_GET["id_active"];
         echo'
         <table>
             <tr>
@@ -57,7 +56,6 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }
-        $id = $_GET["id_active"];
         $db = connectTOSQL();
         $prefLocsql = "select * from history where ID_Cust = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);

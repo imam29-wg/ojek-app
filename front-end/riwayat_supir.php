@@ -64,7 +64,7 @@
 
         while ($row = mysqli_fetch_row($prefLoc_result)) {
         	$count = $count + 1;
-
+            if($row[7] != 1){
         	echo '	<div class="tabel_riwayat" id="history_' .$count .'">
         			<table>
         			<tr>
@@ -81,16 +81,21 @@
             echo "$namaOjekHasil[0] </b> <br>";
             echo "$row[1] -> $row[2]";
             echo '</td>';
-            echo '<td>';
-            echo '<button class="remove" onclick="remove(' .$count .')" > REMOVE </button>';
-            echo '</td>';
+            echo '<td><form action="../back-end/hidHistory.php" method="post">';
+            echo '<input type="hidden" name="order_id" value="'.$row[9].'">';
+            echo '<input type="hidden" name="id_req" value="'.$id.'">';
+            echo '<input type="hidden" name="driver_hide" value="1">';
+            echo '<input class="button_red" type="submit" value="HIDE">';
+            echo '</form></td>';
             echo "</tr>";
             echo '<tr>';
-            echo '<td colspan="2">';
-            echo 'You rated: ' .$row[5] .'/5 <br>You Commented: ' .$row[6] ;
+            echo '<td colspan="2"> gave ';
+            echo '<span class="star_gold">' .$row[5];
+            echo '</span> stars for this order<br>and left comment: <br> &nbsp &nbsp' .$row[6] ;
             echo '</td>';
             echo '</tr>';
         	echo '</table></div><br>';
+        }
         }
     ?>
 
