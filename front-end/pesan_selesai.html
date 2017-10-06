@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="pesan.css">
     <link rel="stylesheet" type="text/css" href="pesan_selesai.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -12,7 +13,7 @@
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
-            <div id="username"></div>
+            <div id="username">Hai, huahahehe</div>
             <a href="login.html">Logout</a>
         </div>
     </div>
@@ -20,30 +21,39 @@
     <div id="nav_tab">
         <table>
             <tr>
-                <td> <a href="pesan.html">ORDER</a> </td>
+                <td class="selected"> <a href="#">ORDER</a> </td>
                 <td> <a href="riwayat.html">HISTORY</a> </td>
-                <td class="selected"> <a href="#">MY PROFILE</a> </td>
+                <td> <a href="profil.html">MY PROFILE</a> </td>
             </tr>
         </table>
     </div>
 
     <div class="page_title">MAKE AN ORDER</div>
     <div id="langkah_order">
-        <div id="pilih_destinasi"> 1. Select Destination </div>
-        <div id="pilih_supir"> 2. Select a Driver </div>
-        <div id="selesai_order"> 3. Complete your order </div>
-    </div>
+        <div class="pilih_unselected">
+            <div class="order_number">1</div>
+            <div class="order_name">Select Destination</div>
+        </div>
+        <div class="pilih_unselected">
+            <div class="order_number">2</div>
+            <div class="order_name">Select a Driver</div>
+        </div>
+        <div class="pilih_selected">
+            <div class="order_number">3</div>
+            <div class="order_name">Complete your order</div>
+        </div>
+    </div> <br>
     <h2>HOW WAS IT?</h2>
-    <div>
-        <img id="gambar_profil" src="../gambar/profil_1.png" height="200px" width="200px">
-        <h3>@pikapikachu</h3>
-        <h3>Pikachu Smith<img src="../gambar/bintang.png" height="20px" width="20px">4.7 (1,728 votes)</h3>
-        <h3>Rating: </h3> <input type="number" name="rating" title="rating" min="1" max="5"> <br>
+    <div id="kesan_supir">
+        <div id="gambar_supir"><img src="../gambar/profil_1.png" height="175px" width="175px"></div>
+        <div id="username_supir">@pikapikachu</div>
+        <div id="nama_supir">Pikachu Smith </div>
+        <div id="bnt_1">&#9734</div><div id="bnt_2">&#9734</div><div id="bnt_3">&#9734</div><div id="bnt_4">&#9734</div><div id="bnt_5">&#9734</div> <br>
     </div>
-    <h3>Komentar:</h3>
-    <input type="text" title="comment" name="comment" size="50">
+    <input id="komentar_supir" type="text" title="comment" name="comment" size=100% placeholder="Your Comment">
     <form action="riwayat.html" method="get">
         <input type="submit" value="COMPLETE ORDER">
     </form>
+
 </body>
 </html>

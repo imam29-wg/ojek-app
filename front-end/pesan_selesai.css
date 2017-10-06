@@ -1,35 +1,24 @@
-#pilihan{
+#kesan_supir{
+    display: block;
+    text-align: center;
+}
+
+#gambar_supir{
+    margin-left: auto;
+    margin-right: auto;
+}
+#username_supir, #nama_supir{
+    font-size: 30px;
+}
+
+
+#bnt_1, #bnt_2, #bnt_3, #bnt_4, #bnt_5{
     display: inline;
+    margin-right: 5px;
+    color: yellow;
+    font-size: 30px;
 }
 
-a.profil_box, a.history_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-
-#order_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    background-color: green;
-    text-align: center;
-}
-
-#selesai_order{
-    width: 150px;
-    background-color: yellow;
-    display: inline-block;
-    border: 2px solid grey;
-}
-
-#pilih_supir, #pilih_destinasi{
-    width: 150px;
-    display: inline-block;
-    border: 2px solid grey;
-    text-decoration: none;
-    color: black;
+#komentar_supir{
+    line-height: 5em;
 }

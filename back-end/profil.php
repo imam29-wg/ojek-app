@@ -9,8 +9,7 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }   
-        $id = $_SESSION['login_user'];
-        // $id=1;
+        $id = 1;
         $db = connectTOSQL();
         $usersql = "select * from profil where ID = '$id'";
         $user_result = mysqli_query($db, $usersql);
@@ -47,11 +46,7 @@
 
         $final_json = json_encode($final_object,JSON_UNESCAPED_SLASHES);
         echo $final_json;
-
         connectTOSQL();
-
-
-
     ?>
 </body>
 </html>

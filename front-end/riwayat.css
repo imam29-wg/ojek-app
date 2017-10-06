@@ -1,45 +1,54 @@
-#pilihan{
-    display: inline;
-}
-
-a.profil_box, a.order_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-
-#history_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    background-color: green;
-    text-align: center;
-}
-
-#riwayat_sebelumnya{
-    width: 225px;
-    border: 2px solid deepskyblue;
-    display: inline-block;
-    background-color: greenyellow;
-    text-align: center;
-}
-
-a.riwayat_supir{
-    width: 225px;
-    border: 2px solid deepskyblue;
-    display: inline-block;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-
 #comment{
     left: 10px;
 }
 
-#hide{
+#daftar_order{
+    display: inline-flex;
+    width: 100%;
+}
+
+.hide{
+    margin-left: 20%;
+    width: 20%;
+    display: inline-flex;
+    float: right;
     background-color: red;
+    border: 2px solid black;
+    border-radius: 15%;
+}
+
+.identitas_riwayat{
+    float: right;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.profil{
+    display: flex;
+}
+
+.tanggal_nama{
+    display: inline;
+}
+
+.tanggal{
+    color: grey;
+    font-size: 20px;
+}
+
+.nama_supir{
+    font-size: 25px;
+}
+
+.tujuan_awal, .tujuan_akhir{
+    display: inline;
+}
+
+.comment{
+    margin-left: 5px;
+}
+
+.rating{
+    display: inline;
+    color: yellow;
 }

@@ -1,6 +1,6 @@
-#login_body{
-    height: 300px;
-    width: 300px;
+#daftar_body{
+    height: 375px;
+    width: 375px;
     border-radius: 15%;
     background-color: yellowgreen;
     border: 15px solid green;
@@ -8,28 +8,30 @@
     margin-left: auto;
 }
 
-div.login_tengah{
+div.daftar_tengah{
     text-align: center;
 }
 
-div.atribut_login{
-    width: 30%;
+div.atribut_daftar{
+    width: 40%;
+    display: inline-flex;
     float: left;
 }
 
-div.input_login{
-    width: 70%;
+div.input_daftar{
+    width: 60%;
     float: right;
+    display: inline-flex;
 }
 
-div.baris_login{
-    margin-bottom: -10px;
+div.baris_daftar{
     display: flex;
+    margin-bottom: -10px;
 }
 
-input.tombol_go {
-    float: right;
+input.tombol_register{
     margin-right: 10px;
+    float: right;
     background-color: green;
     border-color: green;
 }

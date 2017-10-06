@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="riwayat.css">
     <link rel="stylesheet" type="text/css" href="riwayat_supir.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -17,27 +18,46 @@
         </div>
     </div>
     <div id="pilihan">
-        <a class="order_box" href="pesan.html">ORDER</a>
-        <div id="history_box" >HISTORY</div>
-        <a class="profil_box" href="profil.html">MY PROFILE</a>
+        <div id="nav_tab">
+            <table>
+                <tr>
+                    <td> <a href="pesan.html">ORDER</a> </td>
+                    <td class="selected"> <a href="#">HISTORY</a> </td>
+                    <td> <a href="profil.html">MY PROFILE</a> </td>
+                </tr>
+            </table>
+        </div>
     </div>
     <h2>TRANSACTION HISTORY</h2>
-    <div id="pilihan_riwayat">
-        <a class="riwayat_sebelumnya" href="riwayat.html">MY PREVIOUS ORDERS</a>
-        <div id="riwayat_supir">DRIVER HISTORY</div>
-    </div> <br>
+    <div id="history_tab">
+        <table>
+            <tr>
+                <td><a href="riwayat.html">MY PREVIOUS ORDER</a></td>
+                <td class="selected"><a href="#">DRIVER HISTORY</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <br>
     <div id="daftar_supir">
-        <div id="supir">
-            <img src="../gambar/profil_1.png" height="150px" width="150px"><br>
-            Sunday, September 24th 2017
-            <h3>Bomba-rattata Tata</h3>
-            Saffron City - Pewter City<br>
-            <div>Gave <div id="rating">5</div> stars for this order</div>
+        <div class="gambar_supir">
+            <img src="../gambar/profil_1.png" height="150px" width="150px">
+        </div>
+        <div class="identitas_riwayat">
+            <div class="profil">
+                <div class="tanggal_nama">
+                    <div class="tanggal">Sunday, September 24th 2017</div>
+                    <div class="nama_supir">Bomba-rattata Tata</div>
+                </div>
+                <input class="hide" type="submit" value="HIDE">
+            </div>
+            <div class="tujuan_awal">Saffron City</div> - <div class="tujuan_akhir">Pewter City</div><br>
+            Gave <div class="rating">5</div> stars for this order<br>
             and left comment : <br>
-            <div id="comment">
+            <div class="comment">
                 The best
             </div>
-            <input id="hide" type="submit" value="HIDE">
         </div>
     </div>
 </body>

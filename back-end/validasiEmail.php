@@ -10,9 +10,9 @@
     $result = mysqli_query($db, $sql);
     $count = mysqli_num_rows($result);
     if ($count == 0){
-        echo "check.png";
+        echo "../gambar/check.png";
     }
     else{
-        echo "cross_icon.png";
+        echo "../gambar/cross_icon.png";
     }
 ?>

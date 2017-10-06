@@ -12,32 +12,49 @@
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
-            <div id="username">Hai, huahahehe </div>
+            <div id="username">Hai, huahahehe</div>
             <a href="login.html">Logout</a>
         </div>
     </div>
-    <div id="pilihan">
-        <a class="order_box" href="pesan.html">ORDER</a>
-        <div id="history_box" >HISTORY</div>
-        <a class="profil_box" href="profil.html">MY PROFILE</a>
+
+    <div id="nav_tab">
+        <table>
+            <tr>
+                <td > <a href="pesan.html">ORDER</a> </td>
+                <td class="selected"> <a href="#">HISTORY</a> </td>
+                <td> <a href="profil.html">MY PROFILE</a> </td>
+            </tr>
+        </table>
     </div>
     <h2>TRANSACTION HISTORY</h2>
-    <div id="pilihan_riwayat">
-        <div id="riwayat_sebelumnya">MY PREVIOUS ORDERS</div>
-        <a class="riwayat_supir" href="riwayat_supir.html">DRIVER HISTORY</a>
-    </div> <br>
+    <div id="history_tab">
+        <table>
+            <tr>
+                <td class="selected"><a href="#">MY PREVIOUS ORDER</a></td>
+                <td><a href="riwayat_supir.html">DRIVER HISTORY</a> </td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
     <div id="daftar_order">
-        <div id="order">
-            <img src="../gambar/profil_1.png" height="150px" width="150px"><br>
-            Sunday, September 24th 2017
-            <h3>Bomba-rattata Tata</h3>
-            Saffron City - Pewter City<br>
-            You rated : 5 <br>
+        <div class="gambar_supir">
+            <img src="../gambar/profil_1.png" height="150px" width="150px">
+        </div>
+        <div class="identitas_riwayat">
+            <div class="profil">
+                <div class="tanggal_nama">
+                    <div class="tanggal">Sunday, September 24th 2017</div>
+                    <div class="nama_supir">Bomba-rattata Tata</div>
+                </div>
+                <input class="hide" type="submit" value="HIDE">
+            </div>
+        <div class="tujuan_awal">Saffron City</div> - <div class="tujuan_akhir">Pewter City</div><br>
+            You rated : <div class="rating">&#9734 &#9734 &#9734 &#9734 &#9734</div> <br>
             You commented : <br>
-            <div id="comment">
+            <div class="comment">
                 Cepat Sekali!
             </div>
-            <input id="hide" type="submit" value="HIDE">
         </div>
     </div>
 </body>

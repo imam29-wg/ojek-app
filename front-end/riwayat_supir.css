@@ -2,49 +2,13 @@
     display: inline;
 }
 
-a.profil_box, a.order_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-
-#history_box{
-    width: 150px;
-    border: 2px solid greenyellow;
-    display: inline-block;
-    background-color: green;
-    text-align: center;
-}
-
-#riwayat_supir{
-    width: 225px;
-    border: 2px solid deepskyblue;
-    display: inline-block;
-    background-color: greenyellow;
-    text-align: center;
-}
-
-a.riwayat_sebelumnya{
-    width: 225px;
-    border: 2px solid deepskyblue;
-    display: inline-block;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-
 #rating{
     color: yellow;
 }
 
-#hide{
-    background-color: red;
+#daftar_supir{
+    display: inline-flex;
+    width: 100%;
 }
 
-#rating{
-    color: blue;
-    display: inline;
-}
+
