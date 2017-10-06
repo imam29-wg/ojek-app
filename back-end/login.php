@@ -6,6 +6,7 @@
 
     // Fungsi untuk memvalidasi username dan password user
     function validasiLogin($db, $username, $password){
+        session_start();
         $sql = "select ID from profil where Username = '$username' and Password = '$password'";
         $result = mysqli_query($db, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -22,21 +23,19 @@
                 header("Location: ../front-end/profil.php?id_active=$id");
             }
             else {
-                header("Location: ../front-end/pesan.html?id_active=$id");
+                header("Location: ../front-end/pesan.php?id_active=$id");
             }
 
-            die();
         }
         else{
             header("Location: ../front-end/gagal.html");
-            die();
         }
     }
     
-    session_start();
     $db = connectTOSQL();
     $username = $_POST['username'];
     $password = $_POST['password'];
     validasiLogin($db, $username, $password);
+    mysqli_close($db);
 ?>
 

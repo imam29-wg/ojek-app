@@ -3,7 +3,8 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }   
-        $id = 1;
+        $id = $_GET['id_active'];
+        $id = $_SESSION["login_user"];
         $db = connectTOSQL();
         $usersql = "select * from profil where ID = '$id'";
         $user_result = mysqli_query($db, $usersql);
@@ -37,7 +38,8 @@
             }
             $final_object['location'] = $location;
 
+            $prefLocsql = "select Location from pref_location where ID = '$id'";
+            $prefLoc_result = mysqli_query($db, $prefLocsql);
         }
-
         mysqli_close($db);
     ?>
