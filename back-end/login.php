@@ -19,7 +19,7 @@
             $driver_row = mysqli_fetch_array($driver_result, MYSQLI_ASSOC);
             $driver = $driver_row['Driver'];
             if ($driver == 1){
-                header("Location: ../front-end/profil.html?id_active=$id");
+                header("Location: ../front-end/profil.php?id_active=$id");
             }
             else {
                 header("Location: ../front-end/pesan.html?id_active=$id");
