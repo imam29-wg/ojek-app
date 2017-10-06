@@ -3,6 +3,7 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }   
+        $id = $_GET['id_active'];
         $id = $_SESSION["login_user"];
         $db = connectTOSQL();
         $usersql = "select * from profil where ID = '$id'";
