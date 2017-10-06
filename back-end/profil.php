@@ -3,7 +3,7 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }   
-        $id = 1;
+        $id = 2;
         $db = connectTOSQL();
         $usersql = "select * from profil where ID = '$id'";
         $user_result = mysqli_query($db, $usersql);
