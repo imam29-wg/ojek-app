@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-
 <?php include "../back-end/profil.php"?>
 
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
 </head>
 <title>Profil</title>
 <body>
@@ -19,7 +19,7 @@
         <a href="login.html">Logout</a>
     </div>
 </div>
-<br>
+
 <div id="nav_tab">
     <table>
         <tr>
@@ -30,7 +30,7 @@
     </table>
 </div>
 
-<h2>My Profile <a href=<?php echo "edit_profile.php?id_active=".$id?>> <img class="pena" src="../gambar/pena.png"></a> </h2><br>
+<span class="page_title">MY PROFILE<a href=<?php echo "edit_profile.php?id_active=".$id?>> <img class="pena" src="../gambar/pena.png"></a></span><br>
 <div id="biodata">
     <img id="gambar_profil" src= <?php echo $final_object['Foto'] ?> height="200px" width="200px">
     <h3>@p<?php echo $final_object['Username'] ?></h3>

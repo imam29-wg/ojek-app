@@ -6,7 +6,7 @@
     }
 
     if($_POST['back'] != NULL){
-        header("Location: ../front-end/profil.html");
+        header("Location: ../front-end/profil.php");
     }
 
     $target_dir = "../gambar/";
