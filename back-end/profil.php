@@ -35,7 +35,9 @@
             foreach(array($driver_location) as $value) {
                 array_push($location, $value);
             }
+            $final_object['location'] = $location;
 
         }
+
         mysqli_close($db);
     ?>
