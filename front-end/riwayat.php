@@ -1,6 +1,8 @@
 <html>
 <title>Transaction History</title>
 <head>
+    <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -17,11 +19,22 @@
     </div>
 
     <div id="nav_tab">
+
+        <?php
+        $id = $_GET["id_active"];
+        echo'
         <table>
             <tr>
-                <td> <a href="pesan.html">ORDER</a> </td>
-                <td class="selected"> <a href="riwayat.html">HISTORY</a> </td>
-                <td> <a href="#">MY PROFILE</a> </td>
+                <td> <a href="pesan.php?id_active=' .$id .'">ORDER</a> </td>
+                <td class="selected"> <a href="riwayat.php?id_active=' .$id .'">HISTORY</a> </td>
+                <td> <a href="profil.php?id_active=' .$id .'">MY PROFILE</a> </td>
+            </tr>
+        </table>';
+
+    ?>
+        <table>
+            <tr>
+                
             </tr>
         </table>
     </div>
@@ -78,7 +91,7 @@
             echo "$row[1] -> $row[2]";
             echo '</td>';
             echo '<td>';
-            echo '<button onclick="remove(' .$count .')" > REMOVE </button>';
+            echo '<button onclick="remove(' .$count .')" > HIDE </button>';
             echo '</td>';
             echo "</tr>";
             echo '<tr>';

@@ -1,16 +1,15 @@
 <html>
 <title>Edit Preference Location</title>
 <head>
-<link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
-
+    <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
     <div id="header">
         <div id="company">
-            <div id="name">PR-OJEK</div>
+            <div id="name"><span class="hijau">PR</span>-<span class="merah">OJEK</span></div>
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">

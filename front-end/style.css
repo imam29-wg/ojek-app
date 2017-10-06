@@ -52,6 +52,14 @@ body{
     font-size: 250%
 }
 
+#header #company #name .hijau{
+    color: green;
+}
+
+#header #company #name .merah{
+    color: red;
+}
+
 #header #userid{
 
     float: right;
