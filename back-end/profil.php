@@ -1,5 +1,8 @@
     <?php
-        session_start();
+        if(!isset($_SESSION)) 
+        { 
+            session_start(); 
+        } 
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }   

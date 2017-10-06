@@ -1,4 +1,6 @@
+<?php include "../back-end/driver.php"?>
 <?php include "../back-end/profil.php"?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,8 +26,8 @@
     <table>
         <tr>
             <td class="selected"> <a href="#">ORDER</a> </td>
-            <td> <a href=<?php echo"riwayat.php?id_active=".$id?>>HISTORY</a> </td>
-            <td> <a href=<?php echo"profil.php?id_active=".$id?>>MY PROFILE</a> </td>
+            <td> <a href=<?php echo"riwayat.php?id_active=".$_SESSION['login_user']?> >HISTORY</a> </td>
+            <td> <a href=<?php echo"profil.php?id_active=".$_SESSION['login_user'] ?> >MY PROFILE</a> </td>
         </tr>
     </table>
 </div>
@@ -45,40 +47,21 @@
         <div class="order_name">Complete your order</div>
     </div>
 </div> <br>
-<div id="supir_pilihan">
-    <div class="supir">
-        <h2>PREFERRED DRIVERS:</h2>
-        <div class="gambar_supir"><img src="../gambar/profil_1.png" height="100px" width="100px"></div>
-        <div class="identitas_supir">
-            <div class="nama_supir">pikapikachu</div>
-            <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action=<?php echo "pesan_selesai.php?" ?> method="get">
-                <input type="hidden" name = "id_active" value = <?php echo $id ?> >
-                <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
-            </form>
-        </div>
-    </div>
-</div>
-<br><br>
-<div id="supir_lainnya">
-    <div class="supir">
-        <h2>OTHER DRIVERS:</h2>
-        <div class="gambar_supir"><img src="../gambar/profil_1.png" height="100px" width="100px"></div>
-        <div class="identitas_supir">
-            <div class="nama_supir">pikapikachu</div>
-            <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action=<?php echo "pesan_selesai.php?" ?> method="get">
-                <input type="hidden" name = "id_active" value = <?php echo $id ?> >
-                <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
-            </form>
-        </div>
-    </div>
-</div>
+        <?php  
+            echo '<div class="supir_pilihan">';
+            foreach($pref_ids as $id) {
+                showDriver($id, 1);
+            }
+            echo '</div>'
+        ?>
+    <br><br>
+
+        <?php  
+            echo '<div class="supir_lainnya">';
+            foreach($other_ids as $id) {
+                showDriver($id, 0);
+            }
+            echo '</div>'
+        ?>
 </body>
 </html>
-
-<?php
-    $_SESSION['posisi_asal'] = $_GET['pick_point'];
-    $_SESSION['posisi_akhir'] = $_GET['destination'];
-    $_SESSION['pref_driver'] = $_GET['pref_driver'];
-?>
