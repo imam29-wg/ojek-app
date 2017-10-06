@@ -90,8 +90,8 @@
         echo  '<div class="nama_supir">' . $data_driver['Name'] . '</div>';
         echo '<div class="rating"> &#9734 '. $data_driver['avg_rating'] .'</div><div class="votes"> ('. $data_driver['vote'] .'votes)</div>';
         echo '<form action="pesan_selesai.php" method="get">';
-        echo '<input type="hidden" name = "id_active" value" =' . $_SESSION['login_user'] . '>';
-        echo '<input type="hidden" name = "id_driver" value" =' . $driver_id . '>';
+        echo '<input type="hidden" name = "id_active" value =' . $_SESSION['login_user'] . '>';
+        echo '<input type="hidden" name = "id_driver" value =' . $driver_id . '>';
         echo '<input class="pesan_supir_submit" type="submit" value="CHOOSE ME">';
         echo '</form>';
         echo '</div>';
