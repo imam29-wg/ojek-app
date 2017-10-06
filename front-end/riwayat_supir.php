@@ -12,15 +12,16 @@
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
-            <div id="username"></div>
+            <div id="username"> Hai, <?php echo $final_object['Name'] ?> </div>
             <a href="login.html">Logout</a>
         </div>
     </div>
 
+
     <div id="nav_tab">
 
         <?php
-        $id = $_GET["id_active"];
+        $id = $_SESSION["login_user"];
         echo'
         <table>
             <tr>
@@ -38,7 +39,6 @@
     <div id="history_tab">
 
     <?php
-        $id = $_GET["id_active"];
         echo'
         <table>
             <tr>
@@ -51,6 +51,7 @@
 	    
     
     </div>
+    <br>
     <?php        
         $db = connectTOSQL();
         $prefLocsql = "select * from history where ID_Driver = '$id'";
@@ -93,7 +94,7 @@
             echo '</span> stars for this order<br>and left comment: <br> &nbsp &nbsp' .$row[6] ;
             echo '</td>';
             echo '</tr>';
-        	echo '</table></div><br>';
+        	echo '</table><br></div>';
         }
         }
     ?>
@@ -105,8 +106,6 @@
     	rem.parentNode.removeChild(rem);
     }
 </script>
-
-<script type="text/javascript" src="displayUsername.js"></script>
 
 </body>
 </html>

@@ -11,12 +11,30 @@
     font-size: 30px;
 }
 
+#nama_supir{
+    margin-bottom: -40px;
+}
+
+#penilaian_rating{
+    display: inline-block;
+}
 
 #bnt_1, #bnt_2, #bnt_3, #bnt_4, #bnt_5{
-    display: inline;
-    margin-right: 5px;
+    display: inline-block;
+    margin-right: -15px;
     color: yellow;
-    font-size: 30px;
+    font-size: 100px;
+}
+#angka_1, #angka_2, #angka_3, #angka_4, #angka_5{
+    display: inline-block;
+    margin-right: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+#complete_order{
+    float: right;
+    background-color: green;
 }
 
 #komentar_supir{
