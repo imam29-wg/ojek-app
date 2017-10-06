@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="597619c2-6b70-4d07-919c-392f82833ae2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back-end/daftar.php" afterPath="$PROJECT_DIR$/back-end/daftar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front-end/daftar.html" afterPath="$PROJECT_DIR$/front-end/daftar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front-end/pesan_supir.php" afterPath="$PROJECT_DIR$/front-end/pesan_supir.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,21 +19,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
               <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-              <folding>
-                <marker date="1507282364342" expanded="true" signature="1598:2044" ph="..." />
-                <marker date="1507282364342" expanded="true" signature="2014:2038" ph="..." />
-                <marker date="1507282364342" expanded="true" signature="2014:2028" ph="..." />
-                <marker date="1507282364342" expanded="true" signature="2055:2138" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daftar.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/front-end/daftar.html">
+      <file leaf-file-name="pesan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front-end/pesan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="83" lean-forward="true" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
+            <state relative-caret-position="259">
+              <caret line="47" column="4" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -44,11 +37,21 @@
       <file leaf-file-name="daftar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/back-end/daftar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="91">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
               <folding>
                 <marker date="1507282668879" expanded="true" signature="262:401" ph="insert into profil... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pesan_supir.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="70" column="83" lean-forward="false" selection-start-line="70" selection-start-column="83" selection-end-line="70" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,13 +172,13 @@
         <option value="$PROJECT_DIR$/front-end/riwayat_supir.php" />
         <option value="$PROJECT_DIR$/back-end/profil.php" />
         <option value="$PROJECT_DIR$/front-end/pesan.php" />
-        <option value="$PROJECT_DIR$/front-end/pesan_supir.php" />
         <option value="$PROJECT_DIR$/front-end/pesan_selesai.php" />
         <option value="$PROJECT_DIR$/front-end/profil.php" />
         <option value="$PROJECT_DIR$/back-end/pesan.php" />
         <option value="$PROJECT_DIR$/front-end/daftar.css" />
         <option value="$PROJECT_DIR$/front-end/daftar.html" />
         <option value="$PROJECT_DIR$/back-end/daftar.php" />
+        <option value="$PROJECT_DIR$/front-end/pesan_supir.php" />
       </list>
     </option>
   </component>
@@ -187,8 +190,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="351" />
-    <option name="y" value="48" />
+    <option name="x" value="526" />
+    <option name="y" value="52" />
     <option name="width" value="1594" />
     <option name="height" value="961" />
   </component>
@@ -379,10 +382,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76883000" />
+    <option name="totallyTimeSpent" value="77556000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="351" y="48" width="1594" height="961" extended-state="0" />
+    <frame x="526" y="52" width="1594" height="961" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17829949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -552,14 +555,6 @@
             <marker date="1507272004782" expanded="true" signature="1371:1373" ph="{...}" />
             <marker date="1507272004782" expanded="true" signature="2584:2590" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,14 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/pesan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front-end/pesan_selesai.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -788,14 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back-end/pesan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -808,12 +787,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding>
-            <marker date="1507282364342" expanded="true" signature="1598:2044" ph="..." />
-            <marker date="1507282364342" expanded="true" signature="2014:2038" ph="..." />
-            <marker date="1507282364342" expanded="true" signature="2014:2028" ph="..." />
-            <marker date="1507282364342" expanded="true" signature="2055:2138" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -835,20 +809,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/daftar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2121">
+          <caret line="101" column="23" lean-forward="true" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/back-end/daftar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="91">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding>
             <marker date="1507282668879" expanded="true" signature="262:401" ph="insert into profil... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/daftar.html">
+    <entry file="file://$PROJECT_DIR$/front-end/pesan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="83" lean-forward="true" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
+        <state relative-caret-position="259">
+          <caret line="47" column="4" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="70" column="83" lean-forward="false" selection-start-line="70" selection-start-column="83" selection-end-line="70" selection-end-column="83" />
           <folding />
         </state>
       </provider>
