@@ -46,9 +46,19 @@
 </div>
     <h2>PREFERRED LOCATIONS:<a href="editPrefLoc.php"><img class="pena" src="../gambar/pena.png"></a></h2>
     <?php
+        
         if($final_object['Driver'] == 1){
+            $counter = 0;
             while ($row = mysqli_fetch_row($prefLoc_result)) {  
-                echo "<h3>->" . $row[0] . "</h3>";
+  
+                echo "<h3>"; 
+                for ($i = 0; $i <= 20*$counter ; $i++) {
+                    echo "&nbsp ";
+                }
+                echo "->";                
+                echo $row[0];
+                echo  "</h3>";
+                $counter++;
             }
         }
     ?>

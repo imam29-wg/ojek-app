@@ -76,7 +76,6 @@
 </html>
 
 <?php
-    session_start();
     $_SESSION['posisi_asal'] = $_GET['pick_point'];
     $_SESSION['posisi_akhir'] = $_GET['destination'];
     $_SESSION['pref_driver'] = $_GET['pref_driver'];
