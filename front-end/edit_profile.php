@@ -18,8 +18,13 @@
     Phone <input type="text" title="telpon" name="telpon"><br>
     Status Driver :  <img src="../gambar/toggle_yes.png" height="20px" width="40px"> <br><br>
 
-    <input class = "next_action" id = "save" type="submit" value="SAVE" name="save">
-    <input class = "next_action" id = "back" type="submit" value="BACK" name="back"><br>
+    
+    <input class = "next_action" id = "save" type="submit" value="SAVE" name="save"><br>
+    
+</form>
+
+<form action="../front-end/profil.php" method="post">
+    <input class = "next_action" id = "back" type="submit" value="BACK" ><br>
 </form>
 
 </body>

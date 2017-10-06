@@ -44,7 +44,8 @@
         <div class="order_name">Complete your order</div>
     </div>
 </div> <br>
-<form action="<?php echo "pesan_supir.php?id_active=".$id?>" method="get">
+<form action= <?php echo "pesan_supir.php?" ?> method="get">
+    <input type="hidden" name = "id_active" value = <?php echo $id ?> >
         <div class="form_destinasi">
         <div class="atribut_form_destinasi">Picking point</div>
         <div class="input_form_destinasi"><input name="pick_point" id="pick_point" title="pick_driver" type="text"></div><br>
