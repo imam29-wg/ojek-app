@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <?php include "../back-end/profil.php"?>
+<?php include "../back-end/prefLoc.php"?>
 
 <html>
 <head>
@@ -39,8 +40,13 @@
     <h3><?php echo $final_object['Phone'] ?></h3>
 </div>
     <h2>PREFERRED LOCATIONS:<a href="editPrefLoc.html"><img class="pena" src="../gambar/pena.png"></a></h2>
-    <h3>->Pewter City</h3>
+    <?php
+        while ($row = mysqli_fetch_row($prefLoc_result)) {  
+            echo "<h3>->" . $row[0] . "</h3>";
+        }
+    ?>
+    <!-- <h3>->Pewter City</h3>
     <h3>->Saffron City</h3>
-    <h3>->Skypillar Tower</h3>
+    <h3>->Skypillar Tower</h3> -->
 </body>
 </html>
