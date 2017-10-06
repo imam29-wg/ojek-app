@@ -52,7 +52,7 @@
         <div class="identitas_supir">
             <div class="nama_supir">pikapikachu</div>
             <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action="<?php echo"pesan_selesai.php?id_active=".$id?>" method="get">
+            <form action= <?php echo"pesan_selesai.php?id_active=".$id?> method="get">
                 <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
             </form>
         </div>
@@ -66,7 +66,7 @@
         <div class="identitas_supir">
             <div class="nama_supir">pikapikachu</div>
             <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action="<?php echo"pesan_selesai.php?id_active=".$id?>" method="get">
+            <form action=<?php echo"pesan_selesai.php?id_active=".$id?> method="get">
                 <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
             </form>
         </div>
