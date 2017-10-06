@@ -38,7 +38,7 @@ CREATE TABLE `history` (
   `Comment` varchar(140) DEFAULT NULL,
   `HidDriver` int(1) DEFAULT NULL,
   `HidCust` int(1) DEFAULT NULL,
-  `Order_Id` int(11) DEFAULT NULL
+  `Order_Id` int(11) PRIMARY KEY AUTO_INCREMENT
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -104,8 +104,6 @@ INSERT INTO `profil` (`ID`, `Name`, `Username`, `Email`, `Password`, `Phone`, `D
 --
 -- Indexes for table `history`
 --
-ALTER TABLE `history`
-  ADD PRIMARY KEY (`Order_ID`);
 
 --
 -- Indexes for table `pref_location`

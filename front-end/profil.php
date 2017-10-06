@@ -19,7 +19,7 @@
         <a href="login.html">Logout</a>
     </div>
 </div>
-
+<br>
 <div id="nav_tab">
     <table>
         <tr>
