@@ -53,8 +53,8 @@
     <div id="bnt_1">&#9734</div><div id="bnt_2">&#9734</div><div id="bnt_3">&#9734</div><div id="bnt_4">&#9734</div><div id="bnt_5">&#9734</div> <br>
 </div>
 <input id="komentar_supir" type="text" title="comment" name="comment" size=100% placeholder="Your Comment">
-<form action="riwayat.php?id_active="<?php $id?> method="get">
-    <input type="hidden" name="id_active" value="<?php $id ?>">
+<form action=<?php echo "riwayat.php?" ?> method="get">
+    <input type="hidden" name="id_active" value=<?php echo $id ?>>
     <input type="submit" value="COMPLETE ORDER">
 </form>
 
