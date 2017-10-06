@@ -37,10 +37,8 @@
             }
             $final_object['location'] = $location;
 
+            $prefLocsql = "select Location from pref_location where ID = '$id'";
+            $prefLoc_result = mysqli_query($db, $prefLocsql);
         }
-
-        $id = $_SESSION["login_user"];
-        $prefLocsql = "select Location from pref_location where ID = '$id'";
-        $prefLoc_result = mysqli_query($db, $prefLocsql);
         mysqli_close($db);
     ?>
