@@ -37,8 +37,5 @@
             }
 
         }
-
-        $final_json = json_encode($final_object,JSON_UNESCAPED_SLASHES);
-        echo $final_json;
         mysqli_close($db);
     ?>

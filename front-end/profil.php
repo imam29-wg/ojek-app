@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<?php include "../back-end/profil.php"?>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -26,7 +29,7 @@
         </tr>
     </table>
 </div>
-<!--
+
 <div id="pilihan">
     <a class="order_box" href="pesan.html">ORDER</a>
     <a class="history_box" href="riwayat.html">HISTORY</a>
@@ -44,6 +47,6 @@
     <h2>PREFERRED LOCATIONS:<a href="editPrefLoc.html"><img class="pena" src="../gambar/pena.png"></a></h2>
     <h3>->Pewter City</h3>
     <h3>->Saffron City</h3>
-    <h3>->Skypillar Tower</h3>!-->
+    <h3>->Skypillar Tower</h3>
 </body>
 </html>
