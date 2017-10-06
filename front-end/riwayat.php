@@ -22,7 +22,7 @@
     <div id="nav_tab">
 
         <?php
-        $id = $_GET["id_active"];
+        $id = $_SESSION["login_user"];
         echo'
         <table>
             <tr>
