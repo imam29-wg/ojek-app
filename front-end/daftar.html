@@ -6,26 +6,28 @@
 <body>
     <div id="daftar_body">
         <div class="daftar_tengah"><h2>SIGNUP</h2></div>
-        <form action="../back-end/daftar.php" method="post" >
+        <form name="daftar" action="../back-end/daftar.php" method="post" onsubmit="return validasiInput();">
             <div id="form_daftar">
-                <div class="baris_daftar"><div class="atribut_daftar">Your Name</div>         <div class="input_daftar"><input title="" type="text" name="name" value="" size="30"></div></div><br>
-                <div class="baris_daftar"><div class="atribut_daftar">Username</div>          <div class="input_daftar"><input title="" type="text" name="username" value="" size="25" onchange="validasiUsername(this.value)"><img id="username_check" src="" height="20px" width="20px"></div></div><br>
-                <div class="baris_daftar"><div class="atribut_daftar">Email</div>             <div class="input_daftar"><input title="" type="text" name="email" value="" size="25" onchange="validasiEmail(this.value)"><img id="email_check" src="" height="20px" width="20px"></div></div><br>
-                <div class="baris_daftar"><div class="atribut_daftar">Password</div>          <div class="input_daftar"><input title="" type="password" name="password" value="" size="30"></div></div><br>
-                <div class="baris_daftar"><div class="atribut_daftar">Confirm Password</div>  <div class="input_daftar"><input title="" type="password" name="confirm" value="" size="30"></div></div><br>
-                <div class="baris_daftar"><div class="atribut_daftar">Phone Number</div>      <div class="input_daftar"><input title="" type="text" name="phone" value="" size="30"><div></div></div><br>
+                <div class="baris_daftar"><div class="atribut_daftar">Your Name</div>         <div class="input_daftar"><input title="" type="text" name="name" id="name" value="" size="30"></div></div><br>
+                <div class="baris_daftar"><div class="atribut_daftar">Username</div>          <div class="input_daftar"><input title="" type="text" name="username" id="username" value="" size="25" onchange="validasiUsername(this.value)"><img id="username_check" src="" height="20px" width="20px"></div></div><br>
+                <div class="baris_daftar"><div class="atribut_daftar">Email</div>             <div class="input_daftar"><input title="" type="text" name="email" id="email" value="" size="25" onchange="validasiEmail(this.value)"><img id="email_check" src="" height="20px" width="20px"></div></div><br>
+                <div class="baris_daftar"><div class="atribut_daftar">Password</div>          <div class="input_daftar"><input title="" type="password" name="password" id="password" value="" size="30"></div></div><br>
+                <div class="baris_daftar"><div class="atribut_daftar">Confirm Password</div>  <div class="input_daftar"><input title="" type="password" name="confirm" id="confirm" value="" size="30"></div></div><br>
+                <div class="baris_daftar"><div class="atribut_daftar">Phone Number</div>      <div class="input_daftar"><input title="" type="text" name="phone" id="phone" value="" size="30"><div></div></div><br>
             </div> <br>
-                <input title="" type="checkbox" name="driver"> Also sign me up as a driver <br><br>
+                <input title="" type="checkbox" id="driver" name="driver"> Also sign me up as a driver <br><br>
                 <a href="login.html">Already have an account</a>
-                <input class="tombol_register" title="" type="submit" value="REGISTER">
+                <input class="tombol_register" title="" type="submit" value="REGISTER" >
             </div>
         </form>
     </div>
     <script>
         function validasiUsername(username){
             var xmlhttp;
+            var checkUsername = true;
             if (username === ""){
                 document.getElementById('username_check').src="../gambar/cross_icon.png";
+                checkUsername = false;
             }
             else{
                 if (window.XMLHttpRequest){
@@ -37,17 +39,26 @@
                 xmlhttp.onreadystatechange = function () {
                   if (this.readyState === 4 && this.status === 200){
                       document.getElementById('username_check').src=this.responseText;
+                      if (this.responseText === "../gambar/check.png" ){
+                          checkUsername = true;
+                      }
+                      else{
+                          checkUsername = false;
+                      }
                   }
                 };
                 xmlhttp.open("GET", "../back-end/validasiUsername.php?username="+username, true);
                 xmlhttp.send();
             }
+            return checkUsername;
         }
 
         function validasiEmail(email){
             var xmlhttp;
+            var checkEmail = true;
             if (email === ""){
                 document.getElementById('email_check').src="../gambar/cross_icon.png";
+                checkEmail = false;
             }
             else{
                 if (window.XMLHttpRequest){
@@ -59,14 +70,62 @@
                 xmlhttp.onreadystatechange = function(){
                     if (this.readyState === 4 && this.status === 200){
                         document.getElementById('email_check').src=this.responseText;
+                        if (this.responseText === "../gambar/check.png" ){
+                            checkEmail = true;
+                        }
+                        else{
+                            checkEmail = false;
+                        }
                     }
                 };
                 xmlhttp.open("GET", "../back-end/validasiEmail.php?email="+email, true);
                 xmlhttp.send();
             }
+            return checkEmail;
+        }
+        function EmailRegex(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function validasiInput(){
+            var name = document.getElementById('name').value;
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirm = document.getElementById('confirm').value;
+            var phone = document.getElementById('password').value;
+            var driver = document.getElementById('driver').checked;
+
+            var check = true;
+            if ((name ==="") || (name.length > 20)){
+                check=false;
+            }
+            else if ((username === "")||(!validasiUsername(username))){
+                check=false;
+            }
+            else if ((email === "")||(!validasiEmail(email))||(!EmailRegex(email))){
+                check=false;
+            }
+            else if (password === ""){
+                check=false;
+            }
+            else if (password !== confirm){
+                check=false;
+            }
+            else if ((phone.toString().length+3 > 12) || (phone.toString().length+3 < 9)){
+                check=false;
+                alert(phone.toString().length);
+            }
+            else{
+                check=true;
+            }
+            if (!check){
+                alert("Login salah");
+            }
+            return check;
         }
     </script>
-
 
 </body>
 </html>
