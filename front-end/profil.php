@@ -30,7 +30,7 @@
     </table>
 </div>
 
-<h2>My Profile <a href="edit_profile.html"><img class="pena" src="../gambar/pena.png"></a> </h2><br>
+<h2>My Profile <a href="edit_profile.php"><img class="pena" src="../gambar/pena.png"></a> </h2><br>
 <div id="biodata">
     <img id="gambar_profil" src= <?php echo $final_object['Foto'] ?> height="200px" width="200px">
     <h3>@p<?php echo $final_object['Username'] ?></h3>
@@ -44,7 +44,7 @@
     <h3><?php echo $final_object['Email'] ?></h3>
     <h3><?php echo $final_object['Phone'] ?></h3>
 </div>
-    <h2>PREFERRED LOCATIONS:<a href="editPrefLoc.html"><img class="pena" src="../gambar/pena.png"></a></h2>
+    <h2>PREFERRED LOCATIONS:<a href="editPrefLoc.php"><img class="pena" src="../gambar/pena.png"></a></h2>
     <?php
         if($final_object['Driver'] == 1){
             while ($row = mysqli_fetch_row($prefLoc_result)) {  
