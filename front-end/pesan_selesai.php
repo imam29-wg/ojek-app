@@ -50,13 +50,24 @@
     <div id="gambar_supir"><img src="../gambar/profil_1.png" height="175px" width="175px"></div>
     <div id="username_supir">@pikapikachu</div>
     <div id="nama_supir">Pikachu Smith </div>
-    <div id="bnt_1">&#9734</div><div id="bnt_2">&#9734</div><div id="bnt_3">&#9734</div><div id="bnt_4">&#9734</div><div id="bnt_5">&#9734</div> <br>
-</div>
-<input id="komentar_supir" type="text" title="comment" name="comment" size=100% placeholder="Your Comment">
-<form action=<?php echo "riwayat.php?" ?> method="get">
-    <input type="hidden" name="id_active" value=<?php echo $id ?>>
-    <input type="submit" value="COMPLETE ORDER">
-</form>
+    <div id="penilaian_rating">
+        <form action=<?php echo "../back-end/pesan_selesai.php?" ?> method="get">
+            <input type="hidden" name = "id_active" value = <?php echo $id ?> >
+            <div id="bnt_1">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_1">1
+            <div id="bnt_2">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_2">2
+            <div id="bnt_3">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_3">3
+            <div id="bnt_4">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_4">4
+            <div id="bnt_5">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_5" checked>5 <br>
+            <input id="komentar_supir" type="text" title="comment" name="comment" size=100% placeholder="Your Comment">
+            <input type="submit" id="complete_order" value="COMPLETE ORDER">
+        </form>
+    </div>
+
+    <?php
+        $posisi_awal=$_SESSION['posisi_asal'];
+        $posisi_akhir=$_SESSION['posisi_akhir'];
+        $pref_driver=$_SESSION['pref_driver'];
+    ?>
 
 </body>
 </html>
