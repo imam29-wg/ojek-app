@@ -14,7 +14,7 @@
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
-            <div id="username"></div>
+            <div id="username"> Hai, <?php echo $final_object['Name'] ?> </div>
             <a href="login.html">Logout</a>
         </div>
     </div>
@@ -110,8 +110,6 @@
     	rem.parentNode.removeChild(rem);
     }
 </script>
-
-<script type="text/javascript" src="displayUsername.js"></script>
 
 </body>
 </html>

@@ -2,6 +2,8 @@
 <?php include "../back-end/profil.php" ?>
 <title>Transaction History</title>
 <head>
+    <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -63,11 +65,14 @@
         while ($row = mysqli_fetch_row($prefLoc_result)) {
         	$count = $count + 1;
             if($row[7] != 1){
+            $namaOjek = "select * from profil where ID = $row[0]";
+            $namaOjekRes = mysqli_query($db,$namaOjek);
+            $namaOjekHasil = mysqli_fetch_row($namaOjekRes);
             echo '  <div class="tabel_riwayat" id="history_' .$count .'">
                     <table>
                     <tr>
                         <td rowspan="2" class="cell_profpic">
-                            <img src= '; echo $final_object['Foto'];
+                            <img src= '; echo $namaOjekHasil[7];
             echo '>
                         </td>
                         <td>
@@ -75,10 +80,8 @@
             $date = new DateTime($row[4]);
             echo date_format($date,"l, F jS Y");
             echo '</span><br><b>';
-            $namaOjek = "select Name from profil where ID = $row[0]";
-            $namaOjekRes = mysqli_query($db,$namaOjek);
-            $namaOjekHasil = mysqli_fetch_row($namaOjekRes);
-            echo "$namaOjekHasil[0] </b> <br>";
+
+            echo "$namaOjekHasil[1] </b> <br>";
             echo "$row[1] -> $row[2]";
             echo '</td>';
             echo '<td><form action="../back-end/hidHistory.php" method="post">';

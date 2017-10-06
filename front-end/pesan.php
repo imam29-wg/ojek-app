@@ -61,5 +61,16 @@
     <input id="submit_button_destinasi" type="submit" value="NEXT">
 </form>
 
+<script type="text/javascript">
+        
+        function IsEmpty(){
+          if(document.forms['add'].loc.value === "")
+          {
+            alert("Input is empty");
+            return false;
+          }
+            return true;
+        }
+    </script>
 </body>
 </html>
