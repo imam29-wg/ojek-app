@@ -1,6 +1,4 @@
-<?php
-
-?>
+<?php include "../back-end/profil.php"?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +11,7 @@
 
 <form action="../back-end/edit_profile.php" method="post" enctype="multipart/form-data">
     <div id="profile_picture">
-        <img id="gambar" src="../gambar/profil_1.png" height="200px" width="200px">
+        <img id="gambar" src= <?php echo $final_object['Foto'] ?> height="200px" width="200px">
         Select image to upload: <input type="file" name="fileToUpload" id="fileToUpload">
     </div>
     Your Name <input type="text" title="nama" name="nama"><br>

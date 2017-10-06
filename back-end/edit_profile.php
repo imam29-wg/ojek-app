@@ -45,5 +45,5 @@
     mysqli_query($db, $usersql);
     mysqli_close($db);
 
-    header("Location: ../front-end/profil.html");
+    header("Location: ../front-end/profil.php");
 ?>
