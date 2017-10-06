@@ -23,8 +23,8 @@
 <div id="nav_tab">
     <table>
         <tr>
-            <td> <a href="pesan.html">ORDER</a> </td>
-            <td> <a href="riwayat.html">HISTORY</a> </td>
+            <td> <a href=<?php echo"pesan.php?id_active=".$id?>>ORDER</a> </td>
+            <td> <a href=<?php echo"riwayat.php?id_active=".$id?>>HISTORY</a> </td>
             <td class="selected"> <a href="#">MY PROFILE</a> </td>
         </tr>
     </table>

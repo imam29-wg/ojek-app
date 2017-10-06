@@ -1,7 +1,4 @@
-<?php
-
-
-?>
+<?php include "../back-end/profil.php"?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +24,8 @@
     <table>
         <tr>
             <td class="selected"> <a href="#">ORDER</a> </td>
-            <td> <a href="riwayat.html">HISTORY</a> </td>
-            <td> <a href="profil.html">MY PROFILE</a> </td>
+            <td> <a href=<?php echo"riwayat.php?id_active=".$id?>>HISTORY</a> </td>
+            <td> <a href=<?php echo"profil.php?id_active=".$id?>>MY PROFILE</a> </td>
         </tr>
     </table>
 </div>
@@ -55,7 +52,7 @@
         <div class="identitas_supir">
             <div class="nama_supir">pikapikachu</div>
             <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action="pesan_selesai.html" method="get">
+            <form action="<?php echo"pesan_selesai.php?id_active=".$id?>" method="get">
                 <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
             </form>
         </div>
@@ -69,7 +66,7 @@
         <div class="identitas_supir">
             <div class="nama_supir">pikapikachu</div>
             <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action="pesan_selesai.html" method="get">
+            <form action="<?php echo"pesan_selesai.php?id_active=".$id?>" method="get">
                 <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
             </form>
         </div>

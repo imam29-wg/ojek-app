@@ -1,6 +1,5 @@
-<?php
+<?php include "../back-end/profil.php"?>
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +24,8 @@
     <table>
         <tr>
             <td class="selected"> <a href="#">ORDER</a> </td>
-            <td> <a href="riwayat.html">HISTORY</a> </td>
-            <td> <a href="profil.html">MY PROFILE</a> </td>
+            <td> <a href=<?php echo"riwayat.php?id_active=".$id?>>HISTORY</a> </td>
+            <td> <a href=<?php echo"profil.php?id_active=".$id?>>MY PROFILE</a> </td>
         </tr>
     </table>
 </div>
@@ -54,7 +53,8 @@
     <div id="bnt_1">&#9734</div><div id="bnt_2">&#9734</div><div id="bnt_3">&#9734</div><div id="bnt_4">&#9734</div><div id="bnt_5">&#9734</div> <br>
 </div>
 <input id="komentar_supir" type="text" title="comment" name="comment" size=100% placeholder="Your Comment">
-<form action="riwayat.html" method="get">
+<form action="riwayat.php?id_active="<?php $id?> method="get">
+    <input type="hidden" name="id_active" value="<?php $id ?>">
     <input type="submit" value="COMPLETE ORDER">
 </form>
 

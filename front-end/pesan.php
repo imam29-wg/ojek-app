@@ -1,6 +1,4 @@
-<?php
-
-?>
+<?php include "../back-end/profil.php"?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +23,8 @@
     <table>
         <tr>
             <td class="selected"> <a href="#">ORDER</a> </td>
-            <td> <a href="riwayat.html">HISTORY</a> </td>
-            <td> <a href="profil.php">MY PROFILE</a> </td>
+            <td> <a href=<?php echo"riwayat.php?id_active=".$id?>>HISTORY</a> </td>
+            <td> <a href=<?php echo"profil.php?id_active=".$id?>>MY PROFILE</a> </td>
         </tr>
     </table>
 </div>
@@ -46,8 +44,8 @@
         <div class="order_name">Complete your order</div>
     </div>
 </div> <br>
-<form action="pesan_supir.html" method="get">
-    <div class="form_destinasi">
+<form action="<?php echo "pesan_supir.php?id_active=".$id?>" method="get">
+        <div class="form_destinasi">
         <div class="atribut_form_destinasi">Picking point</div>
         <div class="input_form_destinasi"><input id="pick_point" title="pick_driver" type="text"></div><br>
     </div>
