@@ -33,7 +33,13 @@ body{
 	width: 5%;
 }
 
-
+.tabel_prefloc .pena{
+    float: right;
+    width: 20%;
+    height: 100%;
+    border-left: 2px solid black;
+    padding:0; margin:0; 
+}
 
 #header{
     height: 15%;
@@ -182,6 +188,8 @@ body{
 
 .tabel_prefLoc tr td{
     border: 2px solid black;
+    padding:0; margin:0;
+    vertical-align: middle;
 }
 
 .add_form{
@@ -201,3 +209,10 @@ body{
     border: 2px solid black;
     height: 30px;
 }
+
+.tabel_prefloc .edit_name{
+    float: center-vertical;
+    width: 80%;
+        vertical-align: middle;
+}
+
