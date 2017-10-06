@@ -9,7 +9,7 @@
 
     <div id="header">
         <div id="company">
-            <div id="name">PR-OJEK</div>
+            <div id="name"><span class="hijau">PR</span>-<span class="merah">OJEK</span></div>
             <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
         </div>
         <div id="userid">
@@ -39,7 +39,6 @@
     <div id="history_tab">
 
     <?php
-        $id = $_GET["id_active"];
         echo'
         <table>
             <tr>
@@ -57,7 +56,6 @@
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }
-        $id = $_GET["id_active"];
         $db = connectTOSQL();
         $prefLocsql = "select * from history where ID_Cust = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
