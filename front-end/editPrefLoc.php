@@ -19,13 +19,19 @@
     </div>
 
     <div id="nav_tab">
+
+        <?php
+        $id = $_GET["id_active"];
+        echo'
         <table>
             <tr>
-                <td> <a href="pesan.html">ORDER</a> </td>
-                <td> <a href="riwayat.html">HISTORY</a> </td>
-                <td class="selected"> <a href="#">MY PROFILE</a> </td>
+                <td> <a href="pesan.php?id_active=' .$id .'">ORDER</a> </td>
+                <td class="selected"> <a href="riwayat.php?id_active=' .$id .'">HISTORY</a> </td>
+                <td> <a href="profil.php?id_active=' .$id .'">MY PROFILE</a> </td>
             </tr>
-        </table>
+        </table>';
+
+    ?>
     </div>
 
     <div class="page_title">Edit Preference Location</div>

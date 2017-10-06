@@ -32,11 +32,6 @@
         </table>';
 
     ?>
-        <table>
-            <tr>
-                
-            </tr>
-        </table>
     </div>
 
     <div class="page_title">TRANSACTION HISTORY</div>
