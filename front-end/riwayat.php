@@ -1,4 +1,5 @@
 <html>
+<?php include "../back-end/profil.php" ?>
 <title>Transaction History</title>
 <head>
     <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
@@ -52,10 +53,6 @@
     </div>
     <br>
     <?php
-        session_start();
-        function connectTOSQL(){
-            return mysqli_connect("localhost", "root", "", "ojek");
-        }
         $db = connectTOSQL();
         $prefLocsql = "select * from history where ID_Cust = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
@@ -65,12 +62,13 @@
 
         while ($row = mysqli_fetch_row($prefLoc_result)) {
         	$count = $count + 1;
-
+            if($row[8] != 1){
         	echo '	<div class="tabel_riwayat" id="history_' .$count .'">
         			<table>
         			<tr>
         				<td rowspan="2" class="cell_profpic">
-        					<img src="../gambar/profil_' .$row[3] .'.png">
+        					<img src= '; echo $final_object['Foto'];
+            echo '>
         				</td>
            				<td>
                             <span class="tanggal_riwayat">';
@@ -83,9 +81,12 @@
             echo "$namaOjekHasil[0] </b> <br>";
             echo "$row[1] -> $row[2]";
             echo '</td>';
-            echo '<td>';
-            echo '<button onclick="remove(' .$count .')" > HIDE </button>';
-            echo '</td>';
+            echo '<td><form action="../back-end/hidHistory.php" method="post">';
+            echo '<input type="hidden" name="order_id" value="'.$row[9].'">';
+            echo '<input type="hidden" name="id_req" value="'.$id.'">';
+            echo '<input type="hidden" name="driver_hide" value="0">';
+            echo '<input class="button_red" type="submit" value="HIDE">';
+            echo '</form></td>';
             echo "</tr>";
             echo '<tr>';
             echo '<td colspan="2">';
@@ -98,6 +99,7 @@
             echo '</td>';
             echo '</tr>';
         	echo '</table><br></div>';
+        }
         }
     ?>
 

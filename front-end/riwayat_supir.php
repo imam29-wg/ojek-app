@@ -1,4 +1,5 @@
 <html>
+<?php include "../back-end/profil.php" ?>
 <title>Transaction History</title>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -50,11 +51,7 @@
 	    
     
     </div>
-    <?php
-        function connectTOSQL(){
-            return mysqli_connect("localhost", "root", "", "ojek");
-        }
-        
+    <?php        
         $db = connectTOSQL();
         $prefLocsql = "select * from history where ID_Driver = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
@@ -65,16 +62,18 @@
         while ($row = mysqli_fetch_row($prefLoc_result)) {
         	$count = $count + 1;
             if($row[7] != 1){
-        	echo '	<div class="tabel_riwayat" id="history_' .$count .'">
-        			<table>
-        			<tr>
-        				<td rowspan="2" class="cell_profpic">
-        					<img src="../gambar/profil_' .$row[0] .'.png">
-        				</td>
-           				<td>';
+            echo '  <div class="tabel_riwayat" id="history_' .$count .'">
+                    <table>
+                    <tr>
+                        <td rowspan="2" class="cell_profpic">
+                            <img src= '; echo $final_object['Foto'];
+            echo '>
+                        </td>
+                        <td>
+                            <span class="tanggal_riwayat">';
             $date = new DateTime($row[4]);
             echo date_format($date,"l, F jS Y");
-            echo '<br><b>';
+            echo '</span><br><b>';
             $namaOjek = "select Name from profil where ID = $row[0]";
             $namaOjekRes = mysqli_query($db,$namaOjek);
             $namaOjekHasil = mysqli_fetch_row($namaOjekRes);
