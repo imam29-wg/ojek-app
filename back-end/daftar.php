@@ -47,4 +47,6 @@
     $count++;
     */
     masukkanData($db, $name, $username, $email, $password, $confirm, $phone, $driver);
+
+    header("Location: ../front-end/login.html?");
 ?>
