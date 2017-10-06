@@ -3,7 +3,7 @@
 <?php include "../back-end/profil.php"
 ?>
 
-<title>Edit Preference Location</title>
+<title>Edit Preferred Location</title>
 <head>
     <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
@@ -25,7 +25,7 @@
     <div id="nav_tab">
 
         <?php
-        $id = $_GET["id_active"];
+        $id = $_SESSION["login_user"];
         echo'
         <table>
             <tr>
@@ -38,7 +38,7 @@
     ?>
     </div>
 
-    <div class="page_title">Edit Preference Location</div>
+    <div class="page_title">Edit Preferred Location</div>
     
     
     <div class="tabel_prefloc">
@@ -50,7 +50,6 @@
     
 
     <?php
-        $id = $_GET["id_active"];
         $db = connectTOSQL();
         $prefLocsql = "select Location from pref_location where ID = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
@@ -79,27 +78,6 @@
 
 </table>
 </div>
-<script type="text/javascript">
-    function removePrefLoc(id, loc) {
-        var result = confirm("Want to delete?");
-        if (result) {
-            var xmlhttp;
-            if (window.XMLHttpRequest){
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            loc.replace(/ /g,"+") 
-            xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,false);
-            xmlhttp.send();
-            window.location.reload(true);
-            // ubah di current
-            // document.getElementById("prefLoc").deleteRow(id);
-
-        }
-    }
-
-</script>
 
     <div class="page_subtitle">Add New Location</div>
     <div class="add_form">
@@ -127,10 +105,6 @@
             document.getElementById("disket_"+id).type = "image";
             var x = document.getElementById("pena_"+id);
             x.parentNode.removeChild(x);
-        }
-
-        function myFunction() {
-            
         }
     </script>
 </body>
