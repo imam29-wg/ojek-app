@@ -8,7 +8,6 @@
     if($_POST['back'] != NULL){
         header("Location: ../front-end/profil.php");
     }
-
     $target_dir = "../gambar/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;

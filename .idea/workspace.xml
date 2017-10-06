@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="597619c2-6b70-4d07-919c-392f82833ae2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front-end/pesan_selesai.css" afterPath="$PROJECT_DIR$/front-end/pesan_selesai.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back-end/pesan_selesai.php" afterPath="$PROJECT_DIR$/back-end/pesan_selesai.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front-end/pesan_selesai.php" afterPath="$PROJECT_DIR$/front-end/pesan_selesai.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,22 +16,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="pesan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front-end/pesan.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pesan_selesai.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front-end/pesan_selesai.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="68" column="46" lean-forward="false" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="383">
+              <caret line="73" column="50" lean-forward="false" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+              <folding>
+                <marker date="1507294618555" expanded="true" signature="80:95" ph="..." />
+                <marker date="1507294618555" expanded="true" signature="307:316" ph="..." />
+                <marker date="1507294618555" expanded="true" signature="677:713" ph="..." />
+                <marker date="1507294618555" expanded="true" signature="690:713" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,11 +34,21 @@
       <file leaf-file-name="pesan_selesai.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/back-end/pesan_selesai.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="488">
+              <caret line="49" column="71" lean-forward="false" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
               <folding>
-                <marker date="1507288937220" expanded="true" signature="626:765" ph="insert into profil... " />
+                <marker date="1507294608533" expanded="true" signature="767:980" ph="insert into history... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ojek.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back-end/ojek.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1310">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,10 +56,64 @@
       <file leaf-file-name="daftar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/back-end/daftar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="467">
+              <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="49" />
               <folding>
                 <marker date="1507282668879" expanded="true" signature="262:401" ph="insert into profil... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back-end/profil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <marker date="1507290370556" expanded="true" signature="296:333" ph="select * fro... profil" />
+                <marker date="1507290370556" expanded="true" signature="998:1984" ph="..." />
+                <marker date="1507290370556" expanded="true" signature="998:2044" ph="..." />
+                <marker date="1507290370556" expanded="true" signature="1025:1123" ph="select ID_Dr... history" />
+                <marker date="1507290370556" expanded="true" signature="1428:1479" ph="select Locat... pref_location" />
+                <marker date="1507290370556" expanded="true" signature="2063:2114" ph="select Locat... pref_location" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pesan_supir.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pesan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front-end/pesan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="driver.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back-end/driver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <marker date="1507290673636" expanded="true" signature="479:568" ph="select ID fr... profil" />
+                <marker date="1507290673636" expanded="true" signature="737:830" ph="select ID fr... profil" />
+                <marker date="1507290673636" expanded="true" signature="1105:1149" ph="select * fro... profil" />
+                <marker date="1507290673636" expanded="true" signature="1840:1945" ph="select ID_Dr... history" />
+                <marker date="1507290673636" expanded="true" signature="2250:2308" ph="select Locat... pref_location" />
+                <marker date="1507290673636" expanded="true" signature="2889:2947" ph="select Locat... pref_location" />
               </folding>
             </state>
           </provider>
@@ -65,38 +124,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="637">
               <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/back-end/edit_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
-              <folding>
-                <marker date="1507284528965" expanded="true" signature="1287:1378" ph="update profi... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front-end/edit_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pesan_supir.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="82" column="52" lean-forward="true" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -117,6 +144,7 @@
       <find>#</find>
       <find>selected</find>
       <find>profil.html</find>
+      <find>driver.php</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,18 +180,19 @@
         <option value="$PROJECT_DIR$/front-end/riwayat.php" />
         <option value="$PROJECT_DIR$/front-end/riwayat_supir.php" />
         <option value="$PROJECT_DIR$/back-end/profil.php" />
-        <option value="$PROJECT_DIR$/front-end/pesan.php" />
         <option value="$PROJECT_DIR$/back-end/pesan.php" />
         <option value="$PROJECT_DIR$/front-end/daftar.css" />
         <option value="$PROJECT_DIR$/front-end/daftar.html" />
         <option value="$PROJECT_DIR$/back-end/daftar.php" />
-        <option value="$PROJECT_DIR$/front-end/pesan_supir.php" />
         <option value="$PROJECT_DIR$/front-end/edit_profile.php" />
         <option value="$PROJECT_DIR$/back-end/edit_profile.php" />
         <option value="$PROJECT_DIR$/front-end/profil.php" />
         <option value="$PROJECT_DIR$/front-end/pesan_selesai.css" />
-        <option value="$PROJECT_DIR$/front-end/pesan_selesai.php" />
+        <option value="$PROJECT_DIR$/front-end/pesan_supir.php" />
+        <option value="$PROJECT_DIR$/back-end/driver.php" />
+        <option value="$PROJECT_DIR$/front-end/pesan.php" />
         <option value="$PROJECT_DIR$/back-end/pesan_selesai.php" />
+        <option value="$PROJECT_DIR$/front-end/pesan_selesai.php" />
       </list>
     </option>
   </component>
@@ -175,10 +204,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="122" />
-    <option name="y" value="89" />
+    <option name="x" value="234" />
+    <option name="y" value="173" />
     <option name="width" value="1594" />
-    <option name="height" value="961" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -367,10 +396,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83110000" />
+    <option name="totallyTimeSpent" value="88762000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="122" y="89" width="1594" height="961" extended-state="0" />
+    <frame x="234" y="173" width="1594" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17829949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -415,7 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/back-end/dataojek.sql" />
     <entry file="file://$PROJECT_DIR$/front-end/pesan.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -513,18 +541,18 @@
         <state relative-caret-position="2709">
           <caret line="137" column="1" lean-forward="false" selection-start-line="137" selection-start-column="1" selection-end-line="137" selection-end-column="1" />
           <folding>
-            <marker date="1507272004782" expanded="true" signature="835:904" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="931:936" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="955:959" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="969:990" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="1006:1089" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="1102:1150" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="1172:1206" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="1218:1266" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="1290:1311" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="1326:1358" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="1371:1373" ph="{...}" />
-            <marker date="1507272004782" expanded="true" signature="2584:2590" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="835:904" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="931:936" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="955:959" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="969:990" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="1006:1089" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="1102:1150" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="1172:1206" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="1218:1266" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="1290:1311" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="1326:1358" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="1371:1373" ph="{...}" />
+            <marker date="1507288971030" expanded="true" signature="2584:2590" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -623,12 +651,12 @@
           <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
           <caret line="9" column="88" lean-forward="false" selection-start-line="9" selection-start-column="88" selection-end-line="9" selection-end-column="88" />
           <folding>
-            <marker date="1507278869697" expanded="true" signature="591:901" ph="..." />
-            <marker date="1507278869697" expanded="true" signature="608:884" ph="..." />
-            <marker date="1507278869697" expanded="true" signature="1080:1278" ph="..." />
-            <marker date="1507278869697" expanded="true" signature="1097:1261" ph="..." />
-            <marker date="1507278869697" expanded="true" signature="1495:1540" ph="select * fro... history" />
-            <marker date="1507278869697" expanded="true" signature="2198:2233" ph="select Name profil" />
+            <marker date="1507292610336" expanded="true" signature="591:901" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="608:884" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="1080:1278" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="1097:1261" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="1495:1540" ph="select * fro... history" />
+            <marker date="1507292610336" expanded="true" signature="2198:2233" ph="select Name profil" />
           </folding>
         </state>
       </provider>
@@ -649,11 +677,11 @@
           <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="77" />
           <caret line="11" column="81" lean-forward="false" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="88" />
           <folding>
-            <marker date="1507272004766" expanded="true" signature="776:1086" ph="..." />
-            <marker date="1507272004766" expanded="true" signature="793:1069" ph="..." />
-            <marker date="1507272004766" expanded="true" signature="1560:1611" ph="select Locat... pref_location" />
-            <marker date="1507272004766" expanded="true" signature="1994:2195" ph="..." />
-            <marker date="1507272004766" expanded="true" signature="2014:2194" ph="..." />
+            <marker date="1507292610320" expanded="true" signature="776:1086" ph="..." />
+            <marker date="1507292610320" expanded="true" signature="793:1069" ph="..." />
+            <marker date="1507292610320" expanded="true" signature="1560:1611" ph="select Locat... pref_location" />
+            <marker date="1507292610320" expanded="true" signature="1994:2195" ph="..." />
+            <marker date="1507292610320" expanded="true" signature="2014:2194" ph="..." />
           </folding>
         </state>
       </provider>
@@ -671,27 +699,13 @@
         <state relative-caret-position="273">
           <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
-            <marker date="1507278869681" expanded="true" signature="771:1081" ph="..." />
-            <marker date="1507278869681" expanded="true" signature="788:1064" ph="..." />
-            <marker date="1507278869681" expanded="true" signature="1260:1468" ph="..." />
-            <marker date="1507278869681" expanded="true" signature="1277:1451" ph="..." />
-            <marker date="1507278869681" expanded="true" signature="1670:1713" ph="select * fro... history" />
-            <marker date="1507278869681" expanded="true" signature="2437:2472" ph="select Name profil" />
-            <marker date="1507278869681" expanded="true" signature="2886:2919" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back-end/profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <marker date="1507280909004" expanded="true" signature="238:275" ph="select * fro... profil" />
-            <marker date="1507280909004" expanded="true" signature="940:1926" ph="..." />
-            <marker date="1507280909004" expanded="true" signature="940:1986" ph="..." />
-            <marker date="1507280909004" expanded="true" signature="967:1065" ph="select ID_Dr... history" />
-            <marker date="1507280909004" expanded="true" signature="1370:1421" ph="select Locat... pref_location" />
+            <marker date="1507292610336" expanded="true" signature="771:1081" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="788:1064" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="1260:1468" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="1277:1451" ph="..." />
+            <marker date="1507292610336" expanded="true" signature="1670:1713" ph="select * fro... history" />
+            <marker date="1507292610336" expanded="true" signature="2437:2472" ph="select Name profil" />
+            <marker date="1507292610336" expanded="true" signature="2886:2919" ph="..." />
           </folding>
         </state>
       </provider>
@@ -746,16 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back-end/edit_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
-          <folding>
-            <marker date="1507284528965" expanded="true" signature="1287:1378" ph="update profi... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front-end/edit_profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -777,42 +781,8 @@
         <state relative-caret-position="721">
           <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding>
-            <marker date="1507284685927" expanded="true" signature="2112:2195" ph="..." />
+            <marker date="1507292610320" expanded="true" signature="2116:2199" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back-end/daftar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <marker date="1507282668879" expanded="true" signature="262:401" ph="insert into profil... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/pesan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="46" column="46" lean-forward="false" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back-end/ojek.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="132" column="2" lean-forward="true" selection-start-line="132" selection-start-column="2" selection-end-line="132" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="82" column="52" lean-forward="true" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,21 +794,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/edit_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+          <folding>
+            <marker date="1507293116719" expanded="true" signature="1194:1285" ph="update profi... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <marker date="1507290370556" expanded="true" signature="296:333" ph="select * fro... profil" />
+            <marker date="1507290370556" expanded="true" signature="998:1984" ph="..." />
+            <marker date="1507290370556" expanded="true" signature="998:2044" ph="..." />
+            <marker date="1507290370556" expanded="true" signature="1025:1123" ph="select ID_Dr... history" />
+            <marker date="1507290370556" expanded="true" signature="1428:1479" ph="select Locat... pref_location" />
+            <marker date="1507290370556" expanded="true" signature="2063:2114" ph="select Locat... pref_location" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <marker date="1507290673636" expanded="true" signature="479:568" ph="select ID fr... profil" />
+            <marker date="1507290673636" expanded="true" signature="737:830" ph="select ID fr... profil" />
+            <marker date="1507290673636" expanded="true" signature="1105:1149" ph="select * fro... profil" />
+            <marker date="1507290673636" expanded="true" signature="1840:1945" ph="select ID_Dr... history" />
+            <marker date="1507290673636" expanded="true" signature="2250:2308" ph="select Locat... pref_location" />
+            <marker date="1507290673636" expanded="true" signature="2889:2947" ph="select Locat... pref_location" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/pesan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/pesan_supir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/ojek.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1310">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/daftar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="49" />
+          <folding>
+            <marker date="1507282668879" expanded="true" signature="262:401" ph="insert into profil... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/back-end/pesan_selesai.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="488">
+          <caret line="49" column="71" lean-forward="false" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
           <folding>
-            <marker date="1507288937220" expanded="true" signature="626:765" ph="insert into profil... " />
+            <marker date="1507294608533" expanded="true" signature="767:980" ph="insert into history... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front-end/pesan_selesai.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="68" column="46" lean-forward="false" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="383">
+          <caret line="73" column="50" lean-forward="false" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+          <folding>
+            <marker date="1507294618555" expanded="true" signature="80:95" ph="..." />
+            <marker date="1507294618555" expanded="true" signature="307:316" ph="..." />
+            <marker date="1507294618555" expanded="true" signature="677:713" ph="..." />
+            <marker date="1507294618555" expanded="true" signature="690:713" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -32,7 +32,13 @@
 <div class="page_title">EDIT PROFILE INFORMATION</div>
 
 
+<<<<<<< HEAD
 <form action=<?php echo "../back-end/edit_profile.php"?> method="post" enctype="multipart/form-data">
+||||||| merged common ancestors
+<form action=<?php echo "../back-end/edit_profile.php"?> method="get" enctype="multipart/form-data">
+=======
+<form action="../back-end/edit_profile.php" method="post" enctype="multipart/form-data">
+>>>>>>> 261fe5bdf524e67d60f7ac376d71caf1cdc27d40
     <input type="hidden" name="id_active" value=<?php echo $id ?>>
     <div id="profile_picture">
         <table>
@@ -63,7 +69,7 @@
 </form>
 
 
-<form action=<?php echo "profil.php"?> method="get">
+<form action="profil.php" method="get">
     <input type="hidden" name="id_active" value=<?php echo $id ?>>
     <input class = "next_action" id = "back" type="submit" value="BACK" ><br>
 </form>
