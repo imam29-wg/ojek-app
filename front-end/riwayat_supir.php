@@ -20,8 +20,8 @@
         <table>
             <tr>
                 <td> <a href="pesan.html">ORDER</a> </td>
-                <td class="selected"> <a href="riwayat.html">HISTORY</a> </td>
-                <td> <a href="#">MY PROFILE</a> </td>
+                <td class="selected"> <a href="#">HISTORY</a> </td>
+                <td> <a href="profil.html">MY PROFILE</a> </td>
             </tr>
         </table>
     </div>
@@ -35,23 +35,22 @@
         echo'
         <table>
             <tr>
-                <td class="selected"> MY PREVIOUS ORDER </td>
-                <td><a href="riwayat_supir.php?id_active=' .$id .'"> DRIVER HISTORY </a></td>
+                <td> <a href="riwayat.php?id_active=' .$id .'">MY PREVIOUS ORDER </td>
+                <td class="selected"> DRIVER HISTORY </td>
             </tr>
         </table>';
 
     ?>
+	    
     
     </div>
-    <br>
     <?php
-        session_start();
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }
-        $id = $_GET["id_active"];
+        
         $db = connectTOSQL();
-        $prefLocsql = "select * from history where ID_Cust = '$id'";
+        $prefLocsql = "select * from history where ID_Driver = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
         //$prefLocArray = mysqli_fetch_array($prefLoc_result, MYSQLI_ASSOC);
         
@@ -64,34 +63,28 @@
         			<table>
         			<tr>
         				<td rowspan="2" class="cell_profpic">
-        					<img src="../gambar/profil_' .$row[3] .'.png">
+        					<img src="../gambar/profil_' .$row[0] .'.png">
         				</td>
-           				<td>
-                            <span class="tanggal_riwayat">';
+           				<td>';
             $date = new DateTime($row[4]);
             echo date_format($date,"l, F jS Y");
-            echo '</span><br><b>';
-            $namaOjek = "select Name from profil where ID = $row[3]";
+            echo '<br><b>';
+            $namaOjek = "select Name from profil where ID = $row[0]";
             $namaOjekRes = mysqli_query($db,$namaOjek);
             $namaOjekHasil = mysqli_fetch_row($namaOjekRes);
             echo "$namaOjekHasil[0] </b> <br>";
             echo "$row[1] -> $row[2]";
             echo '</td>';
             echo '<td>';
-            echo '<button onclick="remove(' .$count .')" > REMOVE </button>';
+            echo '<button class="remove" onclick="remove(' .$count .')" > REMOVE </button>';
             echo '</td>';
             echo "</tr>";
             echo '<tr>';
             echo '<td colspan="2">';
-            echo 'You rated: ';
-            echo '<span class="star_gold">';
-            for($counter = 0; $counter < $row[5]; $counter++){
-                echo '&#x2606';
-            }
-            echo '</span> <br>You Commented: ' .$row[6] ;
+            echo 'You rated: ' .$row[5] .'/5 <br>You Commented: ' .$row[6] ;
             echo '</td>';
             echo '</tr>';
-        	echo '</table><br></div>';
+        	echo '</table></div><br>';
         }
     ?>
 

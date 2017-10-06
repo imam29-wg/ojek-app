@@ -1,6 +1,9 @@
 <html>
 <title>Edit Preference Location</title>
 <head>
+<link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
+
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -26,16 +29,10 @@
         </table>
     </div>
 
-    <div class="page_subtitle">
-        PREFERRED LOCATIONS:
-        <div class="pena">
-            <img src="../gambar/pena.png">
-        </div>
-    </div>
     <div class="page_title">Edit Preference Location</div>
     
-
-    <table border="1">
+    <div class="tabel_prefloc">
+    <table id="prefLoc">
         <tr>
             <td> NO </td>
             <td> LOCATION </td>
@@ -44,11 +41,10 @@
     
 
     <?php
-        session_start();
         function connectTOSQL(){
             return mysqli_connect("localhost", "root", "", "ojek");
         }
-        $id = $_SESSION["login_user"];
+        $id = $_GET["id_active"];
         $db = connectTOSQL();
         $prefLocsql = "select Location from pref_location where ID = '$id'";
         $prefLoc_result = mysqli_query($db, $prefLocsql);
@@ -61,7 +57,9 @@
             echo "<tr>";
             echo "<td> $count </td>";
             echo "<td> $row[0] </td>";
-            echo "<td> <a href=\"#\" onclick=\"removePrefLoc($id,'$row[0]')\"> <img src=\"../gambar/cross_icon.png\" height=\"20px\" width=\"20px\"> </a>";
+            echo '<td>  <div class="pena">
+            <img src="../gambar/pena.png">
+         <a onclick="removePrefLoc('.$id.',\''.$row[0].'\')"> <img src="../gambar/cross_icon.png" height="20px" width="20px"> </a></div> ';
             echo "</tr>";
 
         }
@@ -70,7 +68,7 @@
 
 
 </table>
-
+</div>
 <script type="text/javascript">
     function removePrefLoc(id, loc) {
         var result = confirm("Want to delete?");
@@ -82,8 +80,15 @@
                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
             loc.replace(/ /g,"+") 
-            xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,true);
+            xmlhttp.open("GET","../back-end/removePrefLoc.php?id="+id+"&loc="+loc,false);
             xmlhttp.send();
+            location.reload(true);
+            location.reload(true);
+            location.reload(true);
+            window.location.reload(true);
+            // ubah di current
+            // document.getElementById("prefLoc").deleteRow(id);
+
         }
     }
 
@@ -92,10 +97,23 @@
 <script type="text/javascript" src="displayUsername.js"></script>
 
     <div class="page_subtitle">Add New Location</div>
-    <form action="../back-end/addPrefLoc.php" method="post" >
-        <input title="" type="text" name="loc" value="" size="30"> <br>
+    <div class="add_form">
+    <form name="add" action="../back-end/addPrefLoc.php" method="post" onsubmit="return IsEmpty();" >
+        <input class="entry" title="" type="text" name="loc" value="" size="30">
         <input class="button_green" title="" type="submit" value="ADD">
-        <?php $id = $_SESSION["login_user"]; echo "<input type=\"hidden\" name=\"id\" value=$id>"; ?>
+        <?php $id = $_GET["id_active"]; echo "<input type=\"hidden\" name=\"id\" value=$id>"; ?>
     </form>
+    </div>
+
+    <script type="text/javascript">
+        function IsEmpty(){
+          if(document.forms['add'].loc.value === "")
+          {
+            alert("Input is empty");
+            return false;
+          }
+            return true;
+        }
+    </script>
 </body>
 </html>

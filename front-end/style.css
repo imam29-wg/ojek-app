@@ -104,7 +104,8 @@ body{
 }
 
 .button_red{
-
+    border-radius: 10px;
+    border: 2px solid black;
 	background-color: red;
 }
 
@@ -145,7 +146,50 @@ body{
     margin: auto;
 }
 
+.tabel_riwayat button{
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: red;
+    float: right;
+}
+
+.tabel_riwayat .star_gold{
+    color: gold;
+}
+
+.tabel_riwayat .tanggal_riwayat{
+    color: grey;
+}
+
 .cell_profpic{
     width: 150px;
-    height: 150px;
+    height: 100px;
+}
+
+.tabel_prefLoc table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabel_prefLoc tr td{
+    border: 2px solid black;
+}
+
+.add_form{
+    width: 100%;
+
+}
+
+.entry{
+    width: 80%;
+    height: 30px;
+    font-size: 110%;
+}
+
+.add_form .button_green{
+    float: right;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 30px;
 }
