@@ -64,9 +64,14 @@
     </div>
 
     <?php
-        $posisi_awal=$_SESSION['posisi_asal'];
+        if (!isset($_SESSION)){
+            session_start();
+        }
+        $posisi_asal=$_SESSION['posisi_asal'];
         $posisi_akhir=$_SESSION['posisi_akhir'];
         $pref_driver=$_SESSION['pref_driver'];
+        $_SESSION['id_active']=$_GET['id_active'];
+        $_SESSION['id_driver']=$_GET['id_driver'];
     ?>
 
 </body>
