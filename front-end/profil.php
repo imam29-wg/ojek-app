@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <?php include "../back-end/profil.php"?>
-<?php include "../back-end/prefLoc.php"?>
 
 <html>
 <head>
