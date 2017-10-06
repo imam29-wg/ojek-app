@@ -6,11 +6,9 @@
     function connectSQL(){
         return mysqli_connect("localhost", "root", "", "ojek");
     }   
-    // $_SESSION['posisi_asal'] = $_GET['pick_point'];
-    // $_SESSION['posisi_akhir'] = $_GET['destination'];
-    // $_SESSION['pref_driver'] = $_GET['pref_driver'];
-
-     $_SESSION['pref_driver'] = "rizki";
+    $_SESSION['posisi_asal'] = $_GET['pick_point'];
+    $_SESSION['posisi_akhir'] = $_GET['destination'];
+    $_SESSION['pref_driver'] = $_GET['pref_driver'];
 
     $pref_ids = array();
     $other_ids = array();
