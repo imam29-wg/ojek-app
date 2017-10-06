@@ -52,7 +52,8 @@
         <div class="identitas_supir">
             <div class="nama_supir">pikapikachu</div>
             <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action="<?php echo"pesan_selesai.php?id_active=".$id?>" method="get">
+            <form action=<?php echo "pesan_selesai.php?" ?> method="get">
+                <input type="hidden" name = "id_active" value = <?php echo $id ?> >
                 <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
             </form>
         </div>
@@ -66,7 +67,8 @@
         <div class="identitas_supir">
             <div class="nama_supir">pikapikachu</div>
             <div class="rating"> &#9734 4.7</div><div class="votes"> (1728 votes)</div>
-            <form action="<?php echo"pesan_selesai.php?id_active=".$id?>" method="get">
+            <form action=<?php echo "pesan_selesai.php?" ?> method="get">
+                <input type="hidden" name = "id_active" value = <?php echo $id ?> >
                 <input class="pesan_supir_submit" type="submit" value="I CHOOSE YOU">
             </form>
         </div>
@@ -76,7 +78,6 @@
 </html>
 
 <?php
-    session_start();
     $_SESSION['posisi_asal'] = $_GET['pick_point'];
     $_SESSION['posisi_akhir'] = $_GET['destination'];
     $_SESSION['pref_driver'] = $_GET['pref_driver'];

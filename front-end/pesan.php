@@ -44,18 +44,19 @@
         <div class="order_name">Complete your order</div>
     </div>
 </div> <br>
-<form action="<?php echo "pesan_supir.php?id_active=".$id?>" method="get">
+<form action= <?php echo "pesan_supir.php?" ?> method="get">
+    <input type="hidden" name = "id_active" value = <?php echo $id ?> >
         <div class="form_destinasi">
         <div class="atribut_form_destinasi">Picking point</div>
-        <div class="input_form_destinasi"><input id="pick_point" title="pick_driver" type="text"></div><br>
+        <div class="input_form_destinasi"><input name="pick_point" id="pick_point" title="pick_driver" type="text"></div><br>
     </div>
     <div class="form_destinasi">
         <div class="atribut_form_destinasi">Destination</div>
-        <div class="input_form_destinasi"><input id="destination" title="destination" type="text"></div><br>
+        <div class="input_form_destinasi"><input name="destination" id="destination" title="destination" type="text"></div><br>
     </div>
     <div class="form_destinasi">
         <div class="atribut_form_destinasi">Preferred Driver</div>
-        <div class="input_form_destinasi"><input id="pref_driver" title="pref_driver" type="text"><br></div>
+        <div class="input_form_destinasi"><input name="pref_driver" id="pref_driver" title="pref_driver" type="text"><br></div>
     </div>
     <input id="submit_button_destinasi" type="submit" value="NEXT">
 </form>

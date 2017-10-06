@@ -30,7 +30,7 @@
     </table>
 </div>
 
-<h2>My Profile <a href="edit_profile.php"><img class="pena" src="../gambar/pena.png"></a> </h2><br>
+<h2>My Profile <a href=<?php echo "edit_profile.php?id_active=".$id?>> <img class="pena" src="../gambar/pena.png"></a> </h2><br>
 <div id="biodata">
     <img id="gambar_profil" src= <?php echo $final_object['Foto'] ?> height="200px" width="200px">
     <h3>@p<?php echo $final_object['Username'] ?></h3>
@@ -44,16 +44,27 @@
     <h3><?php echo $final_object['Email'] ?></h3>
     <h3><?php echo $final_object['Phone'] ?></h3>
 </div>
-    <h2>PREFERRED LOCATIONS:<a href="editPrefLoc.php"><img class="pena" src="../gambar/pena.png"></a></h2>
+    <h2>PREFERRED LOCATIONS:<a href=<?php echo "editPrefLoc.php?id_active=".$id?>><img class="pena" src="../gambar/pena.png"></a></h2>
     <?php
+        
         if($final_object['Driver'] == 1){
+            $counter = 0;
             while ($row = mysqli_fetch_row($prefLoc_result)) {  
-                echo "<h3>->" . $row[0] . "</h3>";
+  
+                echo "<h3>"; 
+                for ($i = 0; $i <= 20*$counter ; $i++) {
+                    echo "&nbsp ";
+                }
+                echo "->";                
+                echo $row[0];
+                echo  "</h3>";
+                $counter++;
             }
         }
     ?>
     <!-- <h3>->Pewter City</h3>
     <h3>->Saffron City</h3>
     <h3>->Skypillar Tower</h3> -->
+    
 </body>
 </html>
