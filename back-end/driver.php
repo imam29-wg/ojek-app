@@ -19,14 +19,14 @@
 
 
     $db = connectSQL();
-    $prefsql = 'select ID from profil where Driver = 1 and Name like "%' . $_SESSION['pref_driver'] . '%"';
+    $prefsql = 'select ID from profil where Driver = 1 and Name like "' . $_SESSION['pref_driver'] . '"';
     $pref_result = mysqli_query($db, $prefsql);
 
     while ($row = mysqli_fetch_row($pref_result)) { 
         array_push($pref_ids, $row[0]);
     }
 
-    $othersql = 'select ID from profil where Driver = 1 and Name not like "%' . $_SESSION['pref_driver'] . '%"';
+    $othersql = 'select ID from profil where Driver = 1 and Name not like "' . $_SESSION['pref_driver'] . '"';
     $other_result = mysqli_query($db, $othersql);
 
     while ($row = mysqli_fetch_row($other_result)) { 
@@ -37,9 +37,11 @@
 
     function showDriver($driver_id, $prefer) {
         $db = connectSQL();
-        $usersql = "select * from profil where ID = '$driver_id'";
+        $usersql = 'select * from profil natural join pref_location where ID = "' .$driver_id .'" and (Location like "' .$_SESSION['posisi_asal'] .'" or Location like "' .$_SESSION['posisi_akhir'] .'")';
         $user_result = mysqli_query($db, $usersql);
-        $user_row = mysqli_fetch_array($user_result, MYSQLI_ASSOC);
+        
+        if (mysqli_num_rows($user_result) > 0){
+            $user_row = mysqli_fetch_array($user_result, MYSQLI_ASSOC);
         $username = $user_row['Username'];
         $driver = $user_row['Driver'];
 
@@ -94,5 +96,6 @@
         echo '</form>';
         echo '</div>';
         echo '</div>';
+    }
     }
 ?>

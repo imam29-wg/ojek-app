@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="edit_profile.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../gambar/favicon-16x16.png" sizes="16x16" />    
 </head>
 <title>Edit Profile</title>
 <body>
@@ -32,40 +32,41 @@
 <div class="page_title">EDIT PROFILE INFORMATION</div>
 
 
-<form action=<?php echo "../back-end/edit_profile.php"?> method="post" enctype="multipart/form-data">
+<form action="../back-end/edit_profile.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id_active" value=<?php echo $id ?>>
     <div id="profile_picture">
         <table>
-            <tr>
-                <td>
-                    <img class="gambar" src= <?php echo $final_object['Foto'] ?>>
-                </td>
-                <td>
-                    <span class="inputgambar">
-                        Update profile picture
-                        <br><input type="file" name="fileToUpload" id="fileToUpload">
-                    </span>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <img class="gambar" src= <?php echo $final_object['Foto'] ?>>
+            </td>
+            <td>
+            <span class="inputgambar">
+            Select image to upload: 
+            <br><input type="file" name="fileToUpload" id="fileToUpload">
+            </span>
+            </td>
+        </tr>
         </table>
     </div>
-    Your Name<div class="edit_input"> <input type="text" title="nama" name="nama"><br></div> <br>
-    Phone <div class="edit_input"><input type="text" title="telpon" name="telpon"><br></div> <br><br>
+    Your Name <input type="text" title="nama" name="nama"><br>
+    Phone <input type="text" title="telpon" name="telpon"><br>
     Status Driver :
     <label class="switch">
         <input type="checkbox" name="isdriver">
         <span class="slider round"></span>
     </label><br><br>
 
+    
     <input class = "next_action" id = "save" type="submit" value="SAVE" name="save"><br>
-
+    
 </form>
 
 
-        <form action="profil.php" method="get">
-            <input type="hidden" name="id_active" value=<?php echo $id ?>>
-            <input class = "next_action" id = "back" type="submit" value="BACK" ><br>
-        </form>
+<form action="profil.php" method="get">
+    <input type="hidden" name="id_active" value=<?php echo $id ?>>
+    <input class = "next_action" id = "back" type="submit" value="BACK" ><br>
+</form>
 
 </body>
 </html>
