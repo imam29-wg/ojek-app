@@ -16,7 +16,7 @@
 }
 
 #penilaian_rating{
-    display: inline-block;
+    
 }
 
 #bnt_1, #bnt_2, #bnt_3, #bnt_4, #bnt_5{
@@ -38,5 +38,6 @@
 }
 
 #komentar_supir{
+    width: 100%;
     line-height: 5em;
 }

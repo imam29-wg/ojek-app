@@ -48,22 +48,6 @@
     </div>
 </div> <br>
 <h2>HOW WAS IT?</h2>
-<div id="kesan_supir">
-    <div id="gambar_supir"><img src="../gambar/profil_1.png" height="175px" width="175px"></div>
-    <div id="username_supir">@pikapikachu</div>
-    <div id="nama_supir">Pikachu Smith </div>
-    <div id="penilaian_rating">
-        <form action=<?php echo "../back-end/pesan_selesai.php?" ?> method="get">
-            <input type="hidden" name = "id_active" value = <?php echo $id ?> >
-            <div id="bnt_1">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_1">1
-            <div id="bnt_2">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_2">2
-            <div id="bnt_3">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_3">3
-            <div id="bnt_4">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_4">4
-            <div id="bnt_5">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_5" checked>5 <br>
-            <input id="komentar_supir" type="text" title="comment" name="comment" size=100% placeholder="Your Comment">
-            <input type="submit" id="complete_order" value="COMPLETE ORDER">
-        </form>
-    </div>
 
     <?php
         if (!isset($_SESSION)){
@@ -74,7 +58,31 @@
         $pref_driver=$_SESSION['pref_driver'];
         $_SESSION['id_active']=$_GET['id_active'];
         $_SESSION['id_driver']=$_GET['id_driver'];
+        $db = connectTOSQL();
+        $foto_driver_q = 'SELECT * FROM profil WHERE ID = "' .$_SESSION['id_driver'] .'"';
+        $foto_driver_res = mysqli_query($db,$foto_driver_q);
+        $foto_driver_hasil = mysqli_fetch_array($foto_driver_res, MYSQLI_ASSOC);
     ?>
+
+<div id="kesan_supir">
+    <div id="gambar_supir">
+        <img src="<?php echo $foto_driver_hasil['foto'] ?>" height="175px" width="175px"></div>
+    <div id="username_supir">@<?php echo $foto_driver_hasil['Username'] ?></div>
+    <div id="nama_supir"><?php echo $foto_driver_hasil['Name'] ?></div>
+    <div id="penilaian_rating">
+        <form action=<?php echo "../back-end/pesan_selesai.php?" ?> method="get">
+            <input type="hidden" name = "id_active" value = <?php echo $id ?> >
+            <div id="bnt_1">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_1">1
+            <div id="bnt_2">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_2">2
+            <div id="bnt_3">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_3">3
+            <div id="bnt_4">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_4">4
+            <div id="bnt_5">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_5" checked>5 <br>
+            <input id="komentar_supir" type="text" title="comment" name="comment" placeholder="Your Comment">
+            <input type="submit" id="complete_order" value="COMPLETE ORDER">
+        </form>
+    </div>
+
+
 
 </body>
 </html>
