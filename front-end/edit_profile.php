@@ -49,8 +49,14 @@
         </tr>
         </table>
     </div>
-    Your Name <input type="text" title="nama" name="nama" value=""><br>
-    Phone <input type="text" title="telpon" name="telpon" value=""><br>
+    <div class="form_destinasi">
+    <span class="atribut_form_destinasi">Your Name</span>
+    <div class="input_form_destinasi"><input type="text" title="nama" name="nama" value=""></div>
+    </div>
+    <div class="form_destinasi">
+    <span class="atribut_form_destinasi">Phone</span>
+    <div class="input_form_destinasi"><input type="text" title="telpon" name="telpon" value=""></div>
+    </div>
     Status Driver :
     <label class="switch">
         <input type="checkbox" name="isdriver">

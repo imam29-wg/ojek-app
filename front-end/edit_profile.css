@@ -110,3 +110,23 @@ input:checked + .slider:before {
     float: right;
     margin-right: 30%;
 }
+
+.form_destinasi{
+    display: flex;
+
+}
+
+.atribut_form_destinasi{
+    font-size: 25px;
+    width: 40%;
+    display: inline-flex;
+    float: left;
+}
+
+.input_form_destinasi{
+    width: 80%;
+    float: right;
+    display: inline;
+    margin-top: auto;
+    margin-bottom: auto;
+}
