@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'VeneerClean'; /*a name to be used later*/
+    src: url('VeneerCleanReg.otf'); /*URL to font*/
+}
+
 #login_body{
     height: 300px;
     width: 300px;
@@ -9,9 +14,14 @@
     color: darkgreen;
 }
 
+.gothic{
+    font-family: 'VeneerClean';
+}
+
 div.login_tengah{
     text-align: center;
     font-size: 20px;
+
 }
 
 div.atribut_login{

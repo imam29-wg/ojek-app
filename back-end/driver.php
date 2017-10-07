@@ -92,7 +92,7 @@
         echo '<form action="pesan_selesai.php" method="get">';
         echo '<input type="hidden" name = "id_active" value =' . $_SESSION['login_user'] . '>';
         echo '<input type="hidden" name = "id_driver" value =' . $driver_id . '>';
-        echo '<input class="pesan_supir_submit" type="submit" value="CHOOSE ME">';
+        echo '<input class="pesan_supir_submit button_green" type="submit" value="CHOOSE ME">';
         echo '</form>';
         echo '</div>';
         echo '</div>';

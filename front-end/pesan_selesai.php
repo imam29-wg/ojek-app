@@ -77,7 +77,7 @@
             <div id="bnt_4">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_4">4
             <div id="bnt_5">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_5" checked>5 <br>
             <input id="komentar_supir" type="text" title="comment" name="comment" placeholder="Your Comment">
-            <input type="submit" id="complete_order" value="COMPLETE ORDER">
+            <input class="button_green" type="submit" id="complete_order" value="COMPLETE ORDER">
         </form>
     </div>
 

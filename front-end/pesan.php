@@ -60,7 +60,7 @@
     <div class="atribut_form_destinasi">Preferred Driver</div>
     <div class="input_form_destinasi"><input name="pref_driver" value="" id="pref_driver" title="pref_driver" type="text"><br></div>
     </div>
-    <input id="submit_button_destinasi" type="submit" value="NEXT">
+    <input id="submit_button_destinasi" class="button_green" type="submit" value="NEXT">
 </form>
 
 <script type="text/javascript">

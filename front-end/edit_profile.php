@@ -64,14 +64,14 @@
     </label><br><br>
 
     
-    <input class = "next_action" id = "save" type="submit" value="SAVE" name="save"><br>
+    <input class = "next_action button_green" id = "save" type="submit" value="SAVE" name="save"><br>
     
 </form>
 
 
 <form action="profil.php" method="get">
     <input type="hidden" name="id_active" value=<?php echo $id ?>>
-    <input class = "next_action" id = "back" type="submit" value="BACK" ><br>
+    <input class = "next_action button_red" id = "back" type="submit" value="BACK" ><br>
 </form>
 
 <script type="text/javascript">
