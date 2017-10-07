@@ -13,7 +13,7 @@
 <div id="header">
     <div id="company">
         <div id="name"><span class="hijau">PR</span>-<span class="merah">OJEK</span></div>
-        <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
+        <div id="tagline">wush... wush... ngeeeeeeeenggg... </div> <br><br>
     </div>
     <div id="userid">
         <div id="username"> Hai, <?php echo $final_object['Name'] ?> </div>
