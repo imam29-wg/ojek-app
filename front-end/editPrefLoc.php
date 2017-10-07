@@ -61,7 +61,7 @@
             $count = $count + 1;
             echo "<tr>";
             echo "<td> $count </td>";
-            echo '<td> <form name="editremove" method="post" action="../back-end/editPrefLoc.php" onsubmit="return EditIsEmpty();"> <span class="edit_name" id="edit_' .$count .'">'.$row[0] .'</span><input type="hidden" id="inp_' .$count .'" name="locnew" value="empty">';
+            echo '<td> <form name="editremove" method="post" action="../back-end/editPrefLoc.php" onsubmit="return EditIsEmpty('.$count.');"> <span class="edit_name" id="edit_' .$count .'">'.$row[0] .'</span><input type="hidden" id="inp_' .$count .'" name="locnew" value="empty">';
             echo '<span class="pena">
             <input type="hidden" name="id" value="'.$id.'">
             <input type="hidden" name="loc" value="'.$row[0].'">
@@ -99,8 +99,8 @@
             return true;
         }
 
-        function EditIsEmpty(){
-          if(document.forms['add'].loc.value === "")
+        function EditIsEmpty(id){
+          if(document.getElementById('inp_' + id).value === "")
           {
             alert("Input is empty");
             return false;

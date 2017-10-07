@@ -69,7 +69,7 @@
     <div id="username_supir">@<?php echo $foto_driver_hasil['Username'] ?></div>
     <div id="nama_supir"><?php echo $foto_driver_hasil['Name'] ?></div>
     <div id="penilaian_rating">
-        <form action=<?php echo "../back-end/pesan_selesai.php?" ?> method="get">
+        <form action=<?php echo "../back-end/pesan_selesai.php?" ?> method="get" name="rating" onsubmit="return IsEmpty();">
             <input type="hidden" name = "id_active" value = <?php echo $id ?> >
             <div id="bnt_1">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_1">1
             <div id="bnt_2">&#8902</div> <input title="" type="radio" name="bintang" value="bintang_2">2
@@ -81,7 +81,19 @@
         </form>
     </div>
 
-
+<script type="text/javascript">
+        
+        function IsEmpty(){
+          if(document.forms['rating'].comment.value === "")
+          {
+            alert("Input is empty");
+            return false;
+          }
+            return true;
+            
+        }
+        
+</script>
 
 </body>
 </html>

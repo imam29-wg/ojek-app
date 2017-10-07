@@ -32,7 +32,7 @@
 <div class="page_title">EDIT PROFILE INFORMATION</div>
 
 
-<form action="../back-end/edit_profile.php" method="post" enctype="multipart/form-data">
+<form action="../back-end/edit_profile.php" method="post" enctype="multipart/form-data" name="edit_profile" onsubmit="return IsEmpty();">
     <input type="hidden" name="id_active" value=<?php echo $id ?>>
     <div id="profile_picture">
         <table>
@@ -49,8 +49,8 @@
         </tr>
         </table>
     </div>
-    Your Name <input type="text" title="nama" name="nama"><br>
-    Phone <input type="text" title="telpon" name="telpon"><br>
+    Your Name <input type="text" title="nama" name="nama" value=""><br>
+    Phone <input type="text" title="telpon" name="telpon" value=""><br>
     Status Driver :
     <label class="switch">
         <input type="checkbox" name="isdriver">
@@ -67,6 +67,23 @@
     <input type="hidden" name="id_active" value=<?php echo $id ?>>
     <input class = "next_action" id = "back" type="submit" value="BACK" ><br>
 </form>
+
+<script type="text/javascript">
+        
+        function IsEmpty(){
+          if((document.forms['edit_profile'].nama.value === "") || (document.forms['edit_profile'].telpon.value === ""))
+          {
+            alert("Input is empty");
+            return false;
+          } else if ((document.forms['edit_profile'].telpon.value.toString().length > 12) || (document.forms['edit_profile'].telpon.value.length < 9)){
+                alert("Your phone input is incorrect");
+                return false;
+            }
+            return true;
+            
+        }
+        
+</script>
 
 </body>
 </html>

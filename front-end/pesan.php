@@ -46,19 +46,19 @@
         <div class="order_name">Complete your order</div>
     </div>
 </div> <br>
-<form action= <?php echo "pesan_supir.php" ?> method="get">
+<form name="pesan" action= <?php echo "pesan_supir.php" ?> method="get" onsubmit="return IsEmpty();">
     <input type="hidden" name = "id_active" value = <?php echo $id ?> >
-        <div class="form_destinasi">
-        <div class="atribut_form_destinasi">Picking point</div>
-        <div class="input_form_destinasi"><input name="pick_point" id="pick_point" title="pick_driver" type="text"></div><br>
+    <div class="form_destinasi">
+    <div class="atribut_form_destinasi">Picking point</div>
+    <div class="input_form_destinasi"><input name="pick_point" value="" id="pick_point" title="pick_driver" type="text"></div><br>
     </div>
     <div class="form_destinasi">
-        <div class="atribut_form_destinasi">Destination</div>
-        <div class="input_form_destinasi"><input name="destination" id="destination" title="destination" type="text"></div><br>
+    <div class="atribut_form_destinasi">Destination</div>
+    <div class="input_form_destinasi"><input name="destination" value="" id="destination" title="destination" type="text"></div><br>
     </div>
     <div class="form_destinasi">
-        <div class="atribut_form_destinasi">Preferred Driver</div>
-        <div class="input_form_destinasi"><input name="pref_driver" id="pref_driver" title="pref_driver" type="text"><br></div>
+    <div class="atribut_form_destinasi">Preferred Driver</div>
+    <div class="input_form_destinasi"><input name="pref_driver" value="" id="pref_driver" title="pref_driver" type="text"><br></div>
     </div>
     <input id="submit_button_destinasi" type="submit" value="NEXT">
 </form>
@@ -66,14 +66,15 @@
 <script type="text/javascript">
         
         function IsEmpty(){
-          if(document.forms['add'].loc.value === "")
+          if((document.getElementById('pick_point').value === "") || (document.forms['pesan'].destination.value === ""))
           {
             alert("Input is empty");
             return false;
           }
             return true;
+            
         }
         
-    </script>
+</script>
 </body>
 </html>
