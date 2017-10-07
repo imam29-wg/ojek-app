@@ -37,8 +37,23 @@
 
     $db = connectTOSQL();
     $id = $_SESSION['login_user'];
-    $usersql = "update profil set Name = '$nama', Phone ='$telepon', foto = '$target_file' where ID = '$id' ";
-    mysqli_query($db, $usersql);
+
+    if ($nama != "" ) {
+        //$usersql = "update profil set Name = '$nama', Phone ='$telepon', foto = '$target_file' where ID = '$id' ";
+        $usersql = "update profil set Name = '$nama' where ID = '$id' ";        
+        mysqli_query($db, $usersql);
+    } 
+
+    if ($telepon != "") {
+        $usersql = "update profil set Phone ='$telepon' where ID = '$id' ";
+        mysqli_query($db, $usersql);
+    }
+
+    if ($target_file != "") {
+        $usersql = "update profil set foto ='$target_file' where ID = '$id' ";
+        mysqli_query($db, $usersql);
+    }
+
     mysqli_close($db);
 
     $db = connectTOSQL();
