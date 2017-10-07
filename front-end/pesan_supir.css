@@ -2,16 +2,18 @@
     border: 2px solid black;
     width: 80%;
     border-radius: 10%;
-    display: inline-flex;
+    display: inline-block;
 }
 
 .supir{
+    display: inline-block;
     margin-left: 10px;
     margin-bottom: 20px;
 }
 
 .gambar_supir{
     float: left;
+    margin-bottom: 15px;
 }
 
 .identitas_supir{
@@ -38,7 +40,7 @@
 
 .pesan_supir_submit{
     float: right;
-    width: 150px;
+    width: 100px;
     height: 35px;
     margin-left: 55%;
     border: 2px solid black;

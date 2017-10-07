@@ -10,15 +10,16 @@
 #back{
     background-color: red;
     text-decoration: none;
-    color: black
+    color: black;
+    margin-top: -44px;
 }
 
 #save{
     color: black;
-    position: absolute;
-    text-align: right;
+    float: right;
     text-decoration: none;
     background-color: green;
+    margin-right: 35%;
 }
 
 .switch {
@@ -26,9 +27,12 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+  float: right;
+  margin-right: 30%;
 }
 
-.switch input {display:none;}
+.switch input {
+    display:none;}
 
 .slider {
   position: absolute;
@@ -98,3 +102,11 @@ input:checked + .slider:before {
 
 }
 
+.nama_input{
+    float: left;
+}
+
+.edit_input{
+    float: right;
+    margin-right: 30%;
+}
