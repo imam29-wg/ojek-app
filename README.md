@@ -7,48 +7,48 @@ Membuat sebuah Website Ojek Online
 Tampilan dari web kami adalah sebagai berikut :
 ### Login
 
-![](screen_shot/login.PNG)
+![](screen_shot/login.png)
 
 
 ### Register
 
-![](screen_shot/signup.PNG)
+![](screen_shot/signup.png)
 
 
-![](screen_shot/signup2.PNG)
+![](screen_shot/signup2.png)
 ### Profile
 
-![](screen_shot/my_profile.PNG)
+![](screen_shot/my_profile.png)
 
 
 ### Edit-Profile
 
-![](screen_shot/edit_profile.PNG)
+![](screen_shot/edit_profile.png)
 
 
 ### Edit-Preferred-Location
 
-![](screen_shot/edit_pref_location.PNG)
+![Alt text](screen_shot/edit_pref_location.png)
 
 ### Order-Ojek
 
-![](screen_shot/order1.PNG)
+![](screen_shot/order1.png)
 
 ### Select-Driver
 
-![](screen_shot/order2.PNG)
+![](screen_shot/order2.png)
 
 
 ### Complete-Order
 
-![](screen_shot/order3.PNG)
+![](screen_shot/order3.png)
 
 
 ### History
 
-![](screen_shot/order_history.PNG)
+![](screen_shot/order_history.png)
 
-![](screen_shot/driver_history.PNG)
+![](screen_shot/driver_history.png)
 
 
 ### Pembagian Tugas
