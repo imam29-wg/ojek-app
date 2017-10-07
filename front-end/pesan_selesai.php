@@ -1,6 +1,5 @@
 <?php include "../back-end/profil.php"?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="../gambar/favicon-32x32.png" sizes="32x32" />
@@ -17,7 +16,7 @@
         <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
     </div>
     <div id="userid">
-        <div id="username">Hai, huahahehe</div>
+        <div id="username"> Hai, <?php echo $final_object['Name'] ?> </div>
         <a href="login.html">Logout</a>
     </div>
 </div>

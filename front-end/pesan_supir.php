@@ -19,7 +19,7 @@
         <div id="tagline">wush... wush... ngeeeeeeeenggg... </div>
     </div>
     <div id="userid">
-        <div id="username">Hai, huahahehe</div>
+        <div id="username"> Hai, <?php echo $final_object['Name'] ?> </div>
         <a href="login.html">Logout</a>
     </div>
 </div>
