@@ -144,22 +144,28 @@ Jika ada pertanyaan silakan tanyakan lewat milis.
 *Disarankan semua anggota kelompok mengerjakan tampilan dan fungsionalitasnya. Bukan hanya tampilan atau fungsionalitasnya saja*
 
 **Tampilan**
-1. Login : 1351xxxx, 135xxxxx
-2. Register : 135xxxxx
-3. Lanjutkan ...
+1. Login : 13515095
+2. Daftar : 13515095
+3. Gagal : 13515095
+4. Pesan : 13515095
+5. Pesan supir : 13515095, 13515104
+6. Pesan selesai : 13515095
+7. Profil : 13515104
+8. Edit Profil : 13515104
+9. Riwayat : 13515017
+10. Riwayat Supir : 13515017
+11. Edit Preference Location : 13515017
 
 **Fungsionalitas**
-1. Login : 135xxxxx, 135xxxxx
-2. Register : 135xxxxx
-3. Fungsionalitas : 135xxxxx,135xxxxx
-4. Lanjutkan...
-
-## About
-
-Asisten IF3110 2016
-
-Ade | Johan | Kristianto | Micky | Michael | Rangga | Raudi | Robert | Sashi 
-
-Dosen : Yudistira Dwi Wardhana | Riza Satria Perdana | Muhammad Zuhri Catur Candra
-
+1. Login : 13515095
+2. Daftar : 13515104
+3. Gagal : 13515095
+4. Pesan : 13515104
+5. Pesan supir : 13515104
+6. Pesan selesai : 13515095, 13515017
+7. Profil : 13515104
+8. Edit Profil : 13515104, 13515107
+9. Riwayat : 13515017
+10. Riwayat Supir : 13515017
+11. Edit Preference Location : 13515017
 
