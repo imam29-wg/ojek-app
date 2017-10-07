@@ -31,6 +31,14 @@
             $driver_location_row = mysqli_fetch_array($driver_result, MYSQLI_ASSOC);
             $driver_location = $driver_location_row['Location'];   
             
+            if ($driver_avg_rating == "") {
+                $driver_avg_rating = 0;
+            }
+
+            if ($driver_vote == "") {
+                $driver_vote = 0;
+            }
+
             $final_object['avg_rating'] = $driver_avg_rating;
             $final_object['vote'] = $driver_vote;
             

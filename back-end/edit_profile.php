@@ -5,9 +5,6 @@
         return mysqli_connect("localhost", "root", "", "ojek");
     }
 
-    if($_POST['back'] != NULL){
-        header("Location: ../front-end/profil.php");
-    }
     $target_dir = "../gambar/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
@@ -44,5 +41,19 @@
     mysqli_query($db, $usersql);
     mysqli_close($db);
 
+    $db = connectTOSQL();
+    $id = $_SESSION['login_user'];
+    // $usersql = "update profil set Name = '$nama', Phone ='$telepon', foto = '$target_file' where ID = '$id' ";
+    if(isset($_POST['isdriver'])) {
+        $usersql = "update profil set Driver = 1 where ID = '$id' ";
+        mysqli_query($db, $usersql);
+    } else {
+        $usersql = "update profil set Driver = 0 where ID = '$id' ";
+        mysqli_query($db, $usersql);
+    }
+    
+    mysqli_close($db);
+    
+  
     header("Location: ../front-end/profil.php?id_active=".$id);
 ?>
